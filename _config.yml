@@ -1,0 +1,37 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Naringu
+tagline:             'A Hacker like jekyll theme'
+description:         'oonlab is crafted with <3 by ariestiyansyah.'
+url:                 http://naringu.oonlab.com
+baseurl:             /
+paginate:            7
+
+# About/contact
+author:
+  name:              Rizky Ariestiyansyah
+  url:               https://twitter.com/ariestiyansyah
+  email:             ariestiyansyah.rizky@gmail.com
+
+# Custom vars
+version:             2.0
+
+# Social Media
+github:				http://github.com/ariestiyansyah
+twitter:			http://twitter.com/ariestiyansyah
+disqus:             testnaringu
+
+# Theme Author (Please don't edit this line cause of MIT LICENSE rules)
+theme:
+  creator:			Rizky Ariestiyansyah
+  codename:			Naringu
+  link:             https://github.com/ariestiyansyah/naringu
