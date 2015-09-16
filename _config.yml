@@ -10,7 +10,7 @@ relative_permalinks: true
 
 # Setup
 title:               s0lst1ce.github.io
-tagline:             'tis a blog'
+tagline:             ''
 description:         'tis a description of a blog'
 url:                 http://s0lst1c3.github.io
 baseurl:             /
