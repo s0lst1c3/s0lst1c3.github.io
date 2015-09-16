@@ -33,12 +33,13 @@ html,
 body {
   margin: 0;
   padding: 0;
-  border: 1px solid #6DD;
+  border: 1px solid #4D4D4D;;
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+ /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
   line-height: 1.5;
 }
 @media (min-width: 38em) {
@@ -56,8 +57,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  //color: #6DD;
-  color: #FFFFFF;
+  color: #fff;
   text-decoration: none;
 }
 a strong {
@@ -71,10 +71,11 @@ a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
   font-weight: 400;
-  //color: #25BFBF;
-  color: #FFFFFF;
+  /*color: #25BFBF; */
+  color: #fff;
   letter-spacing: -.025rem;
 } 
 
@@ -100,9 +101,12 @@ p {
   margin-bottom: 1rem;
 }
 
+/*
 strong {
   color: #1BFFFF;
+  color: #1BFFFF;
 }
+*/
 
 
 /* Lists */
@@ -123,19 +127,19 @@ hr {
   position: relative;
   margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid #6DD;
-  border-bottom: 1px solid #6DD;
+  border-top: 1px solid ;#4D4D4D;
+  border-bottom: 1px solid #4D4D4D;
 }
 
 abbr {
   font-size: 85%;
   font-weight: bold;
-  color: #6DD;
+  color: #4D4D4D;
   text-transform: uppercase;
 }
 abbr[title] {
   cursor: help;
-  border-bottom: 1px dotted #6DD;
+  border-bottom: 1px dotted #4D4D4D;
 }
 
 /* 
@@ -166,7 +170,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #000;
-  border: 1px solid #6DD;
+  border: 1px solid #4D4D4D;
 }
 pre code {
   padding: 0;
@@ -179,7 +183,7 @@ pre code {
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
-  background-color: #6DD;
+  background-color: #4D4D4D;
 }
 .highlight pre {
   margin-bottom: 0;
@@ -239,13 +243,13 @@ img {
 table {
   margin-bottom: 1rem;
   width: 100%;
-  border: 1px solid #6DD;
+  border: 1px solid #4D4D4D;
   border-collapse: collapse;
 }
 td,
 th {
   padding: .25rem .5rem;
-  border: 1px solid #6DD;
+  border: 1px solid #4D4D4D;
 }
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
@@ -299,15 +303,17 @@ tbody tr:nth-child(odd) th {
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid #6DD;
+  border-bottom: 1px solid #4D4D4D;
 }
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
+  /*color: #505050;*/
+  //color: #FFFFFF;
+  color: #FFFFFF;
 }
 .masthead-title a {
-  color: #505050;
+  color: #DEE3DE;
 }
 .masthead-title small {
   font-size: 75%;
@@ -351,9 +357,11 @@ tbody tr:nth-child(odd) th {
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
-  color: rgba(255,255,255,.6);
-  border: 1px solid #6DD;
-  background-color: #202020;
+  //color: rgba(255,255,255,.6);
+  color: #DEE3DE;
+  border: 1px solid #4D4D4D;
+  //background-color: #202020;
+  background-color: #000000;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
@@ -366,7 +374,8 @@ tbody tr:nth-child(odd) th {
 /* Sidebar content */
 .sidebar a {
   font-weight: normal;
-  color: #6DD;
+  //color: #4D4D4D;
+  color: #DEE3DE;
 }
 .sidebar-item {
   padding: 1rem;
@@ -389,7 +398,7 @@ a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
   background-color: #191E1E;
-  border-color: #6DD;
+  border-color: #4D4D4D;
 }
 
 @media (min-width: 48em) {
@@ -415,7 +424,7 @@ a.sidebar-nav-item:focus {
   display: block;
   width: 2.2rem;
   padding: .5rem .65rem;
-  color: #6DD;
+  color: #FFFFFF;
   background-color: #000;
   border-radius: 4px;
   cursor: pointer;
@@ -436,8 +445,8 @@ a.sidebar-nav-item:focus {
 
 .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: #6DD;
-  background-color: #505050;
+  color: #FFFFFF;
+  background-color: #838383;
 }
 
 @media (min-width: 30.1em) {
@@ -515,7 +524,7 @@ a.sidebar-nav-item:focus {
   margin-bottom: 1rem;
   padding: 1rem;
   color: #000;
-  background-color: #6DD;
+  background-color: #4D4D4D;
 }
 
 /*
@@ -534,7 +543,7 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #25BFBF;
+  color: #DEE3DE;
 }
 .page-title,
 .post-title {
@@ -557,8 +566,7 @@ a.sidebar-nav-item:focus {
 .related {
   /*padding-top: 2rem;*/
   /*padding-bottom: 2rem;*/
-  border-top: 1px solid #6DD;
-  /*border-bottom: 1px solid #6DD;*/
+  border-top: 1px solid #4D4D4D;
 }
 .related-posts {
   padding-left: 0;
@@ -593,7 +601,9 @@ a.sidebar-nav-item:focus {
   margin-left: -1rem;
   margin-right: -1rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: #ccc;
+  //color: #ccc;
+  color: #c0c0c0;
+  //color: #DEE3DE;
   text-align: center;
 }
 
@@ -601,7 +611,7 @@ a.sidebar-nav-item:focus {
 .pagination-item {
   display: block;
   padding: 1rem;
-  border: 1px solid #6DD;
+  border: 1px solid #4D4D4D;
 }
 .pagination-item:first-child {
   margin-bottom: -1px;
@@ -637,7 +647,6 @@ a.pagination-item:hover {
  *
  * Default dark theme of Naringu is here (Will Update)
 
-/* #6DD */
 
 .theme-6dd .sidebar,
 .theme-6dd .sidebar-toggle:active,
@@ -647,7 +656,7 @@ a.pagination-item:hover {
 .theme-6dd .container a,
 .theme-6dd .sidebar-toggle,
 .theme-6dd .related-posts li a:hover {
-  color: #6DD;
+  color: #fff;
 }
 
 
@@ -684,5 +693,5 @@ a.pagination-item:hover {
 .footer {
   padding-top: 10px;
   padding-bottom: 10px; 
-  border-top: 1px solid #6DD;
+  border-top: 1px solid #4D4D4D;
 }
