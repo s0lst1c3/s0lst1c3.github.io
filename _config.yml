@@ -12,7 +12,7 @@ relative_permalinks: true
 title:               s0lst1ce.github.io
 tagline:             ''
 description:         'tis a description of a blog'
-url:                 http://s0lst1c3.github.io
+url:                 http://s0lst1ce.github.io
 baseurl:             /
 paginate:            7
 
@@ -26,8 +26,8 @@ author:
 version:             2.0
 
 # Social Media
-github:				http://github.com/s0lst1c3
-twitter:			http://twitter.com/s0lst1c3
+github:				http://github.com/s0lst1ce
+twitter:			http://twitter.com/s0lst1ce
 
 # Theme Author (Please don't edit this line cause of MIT LICENSE rules)
 theme:
