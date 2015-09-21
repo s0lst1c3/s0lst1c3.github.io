@@ -11,16 +11,16 @@ relative_permalinks: true
 # Setup
 title:               s0lst1ce.github.io
 tagline:             ''
-description:         'tis a description of a blog'
+description:         "I'm an aspiring offensive security R&D, and this is my blog."
 url:                 http://s0lst1ce.github.io
 baseurl:             /
 paginate:            7
 
 # About/contact
 author:
-  name:              Author here
+  name:              Gabriel 's0lst1ce' Ryan
   url:               https://twitter.com/s0lst1c3
-  email:             contact@solstice.me
+  email:             john.ryan@ogsystems.com
 
 # Custom vars
 version:             2.0
