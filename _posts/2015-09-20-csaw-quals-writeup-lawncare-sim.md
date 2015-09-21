@@ -93,7 +93,7 @@ Some key things we should take into consideration:
 	
 - the while loop on line 16 will never execute if $hash[$index] is NULL
 
-What happens if we pass empty strings as both the username and password? The mysql query on line 8 will fail, setting the value of $result to NULL. This will cause mysql\_fetch\_row() to return NULL on line 9, setting the value of $line to NULL. Because NULL is not an associative array, $hash will be set to NULL on line 10.  This means that strlen($hash) on line 12 will return NULL, and strlen($pass) will return 0. Since 0 != NULL evaluates to false, the line 13 will never execute. The while loop on lines 16 through 22 will be bypassed as well, because $hash[$index] will evaluate to NULL, which is logically equivalent to false. Therefore the function will return true.
+What happens if we pass empty strings as both the username and password? The mysql query on line 8 will fail, setting the value of $result to NULL. This will cause mysql\_fetch\_row() to return NULL on line 9, setting the value of $line to NULL. Because NULL is not an associative array, $hash will be set to NULL on line 10.  This means that strlen($hash) on line 12 will return NULL, and strlen($pass) will return 0. Since 0 != NULL evaluates to false, line 13 will never execute. The while loop on lines 16 through 22 will be bypassed as well, because $hash[$index] will evaluate to NULL, which is logically equivalent to false. Therefore the function will return true.
 
 All we need to do is pass empty strings as both the username and the password. Sounds
 easy enough. 
