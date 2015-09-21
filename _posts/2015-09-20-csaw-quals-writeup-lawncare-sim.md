@@ -73,7 +73,7 @@ used as part of the mysql query.
 
 ![real_escape_string() ]({{ site.baseurl }}images/real-escape-string.png)
 
-The script then constructs a query from $user, and uses it to retrieve the user's hashed password from the database. The length of the hashed passwrod, stored in the variable $hash, is then compared with the length of $pass. 
+The script then constructs a query from $user, and uses it to retrieve the user's hashed password from the database. The length of the hashed password, stored in the variable $hash, is then compared with the length of $pass. 
 
 ![query ]({{ site.baseurl }}images/query.png)
 
