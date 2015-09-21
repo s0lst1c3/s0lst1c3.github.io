@@ -89,7 +89,7 @@ Some key things we should take into consideration:
 
 - strlen() returns 0 if passed an empty string, and returns NULL if passed NULL as a paramter
 
-- the statement 0 != NULL is false due to PHPs built in type juggling
+- the statement 0 != NULL is false due to PHP's built in type juggling
 	
 - the while loop on line 16 will never execute if $hash[$index] is NULL
 
