@@ -8,15 +8,15 @@ categories:
 - red team labs
 ---
 
-![waldo usage]({{ site.baseurl }}images/waldo-usage.png)
-
 At Red Team Labs, we find ourselves using DirBuster a lot. It's a pretty
 essential tool for quickly enumerating subdomains and web directories. The project
 is no longer actively maintained however, and since it's written in Java it doesn't
 exactly work well with our existing toolset. To deal with this, we wrote our own
-multithreaded subdomain and directory bruteforcer in Python. We named it Waldo. You
-can check out the project on github by clicking [here](http://www.github.com/red-team-labs/waldo).
+multithreaded subdomain and directory bruteforcer in Python. We named it Waldo. 
 
+![waldo usage]({{ site.baseurl }}images/waldo-usage.png)
+
+You can check out the project on github by clicking [here](http://www.github.com/red-team-labs/waldo).
 
 ![Demo]({{ site.baseurl }}images/waldo-demo.png)
 
