@@ -11,14 +11,14 @@ relative_permalinks: true
 # Setup
 title:               s0lst1ce.github.io
 tagline:             ''
-description:         "I'm an aspiring offensive security R&D, and this is my blog."
+description:         "My name is John Gabriel Ryan. I'm an aspiring offensive security R&D, and this is my blog."
 url:                 http://s0lst1ce.github.io
 baseurl:             /
 paginate:            7
 
 # About/contact
 author:
-  name:              Gabriel 's0lst1ce' Ryan
+  name:              John Gabriel 's0lst1ce' Ryan
   url:               https://twitter.com/s0lst1c3
   email:             john.ryan@ogsystems.com
 
@@ -29,8 +29,3 @@ version:             2.0
 github:				http://github.com/s0lst1ce
 twitter:			http://twitter.com/s0lst1ce
 
-# Theme Author (Please don't edit this line cause of MIT LICENSE rules)
-theme:
-  creator:			Rizky Ariestiyansyah
-  codename:			Naringu
-  link:             https://github.com/ariestiyansyah/naringu
