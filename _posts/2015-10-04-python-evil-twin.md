@@ -205,11 +205,11 @@ class IPTables(object):
             IPTables._instance = IPTables()
         return IPTables._instance
 
-    def route_to_sslstrip(self, inet_nic, listen_nic):
+    def route_to_sslstrip(self, phys, upstream):
 
-	    bash_command('iptables --table nat --append POSTROUTING --out-interface %s -j MASQUERADE' % inet_nic)
+	    bash_command('iptables --table nat --append POSTROUTING --out-interface %s -j MASQUERADE' % phys)
 	    
-	    bash_command('iptables --append FORWARD --in-interface %s -j ACCEPT' % listen_nic)
+	    bash_command('iptables --append FORWARD --in-interface %s -j ACCEPT' % upstream)
 	
 	    bash_command('iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000')
 	    bash_command('iptables -t nat -A PREROUTING -p tcp --destination-port 443 -j REDIRECT --to-port 10000')
