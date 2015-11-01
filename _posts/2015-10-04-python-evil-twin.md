@@ -29,7 +29,7 @@ We're also going to need a external wireless card to serve as our access point. 
 
 We're also going to need a seperate network interface with which to connect to the internet. For PoC purposes, your laptop's internal wireless or ethernet cards should be sufficient. For an actual attack you'd probably want to use some kind of mobile usb hotspot for maximum tactical flexibility.
 
-We will also need software to run our hotspot. We'll be implementing our access point from scratch using Python's Scapy library in later tutorials, but for now we're going to keep things simple and create a wrapper to hostapd.  You can install hostapd in the terminal using your distro's package manager.
+Also on our requirements list is the software needed to run our hotspot. We'll be implementing our access point from scratch using Python's Scapy library in later tutorials, but for now we're going to keep things simple and create a wrapper to hostapd.  You can install hostapd in the terminal using your distro's package manager.
 
 
 Additionally, we need a way of handling dhcp and dns for devices that connect to our access point. For this tutorial we'll be using dnsmasq to do both. Like hostapd, dnsmasq can be installed using your package manager.
