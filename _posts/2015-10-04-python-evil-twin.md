@@ -1108,7 +1108,7 @@ To launch our attack, we simply run our evil_twin.py script as shown below.
 The exact syntax for doing this is
 
 {% highlight bash %}
-	python evil_twin.py -u <upstream interface> -i <gateway interface> -s <essid> -c <channel>
+	python evil_twin.py -l <upstream interface> -i <gateway interface> -s <essid> -c <channel>
 {% endhighlight %}
 
 You should now see the devices associated with the target network drop from the AP we just attacked, then connect to you instead. This output will come from your filtered dnsmasq log file, as shown below.
