@@ -1045,7 +1045,7 @@ sudo systemctl disable NetworkManager.service
 We then need to connect our gateway interface to some network other than the one we are attacking. I'm connecting to my home wifi network using wpa_supplicant, but it might be a bit easier to connect using your ethernet interface. All the info you need to do this can be found [here](http://unix.stackexchange.com/questions/92799/connecting-to-wifi-network-through-command-line).
 
 
-Once you connect, you will need to need to run the following commands to obtain an IP lease:
+Once you connect, you will need to run the following commands to obtain an IP lease:
 
 {% highlight bash %}
 
