@@ -20,7 +20,7 @@ Carrying out an evil twin attack involves using two network interfaces. One inte
 
 There are a few basic ingredients needed to perform the evil twin attack. At a most basic
 level, we're going to need a laptop running Linux. I'm using Fedora 22, although you can
-use just about any distro you want so long as it has the wireless drivers for your wireless cards.
+use just about any distro you want so long as it supports the drivers for your wireless cards.
 
 
 We're also going to need a external wireless card to serve as our access point. Any external card capable of running in Master mode will work, although I've had the most success with these:
