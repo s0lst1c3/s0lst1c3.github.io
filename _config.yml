@@ -11,7 +11,7 @@ relative_permalinks: true
 # Setup
 title:               solstice.me
 tagline:             ''
-description:         "My name is John Gabriel Ryan. I'm an aspiring offensive security R&D, and this is my blog."
+description:         "My name is Gabriel Ryan. I'm an aspiring offensive security R&D, and this is my blog."
 url:                 http://s0lst1ce.github.io
 baseurl:             /
 paginate:            7
