@@ -12,7 +12,7 @@ categories:
 
 ![Mr. Robot]({{ site.baseurl }}images/rudy-post/mr-robot.jpg)
 
-I'm a huge Mr. Robot fan. In one of the most memorable scenes in the pilot episode, Elliot is called in to work to stop what appears to be a massive DDoS attack against EvilCorp's servers. When it becomes clear that the attack is not a DDoS at all, and that he's dealing with a much more subtle threat from within EvilCorp's infrastructure, he exclaims excitedly "Is this a R.U.D.Y. attack? This is awesome!" 
+I'm a huge Mr. Robot fan. In one of the most memorable scenes of the pilot episode, Elliot is called in to work to stop what appears to be a massive DDoS attack against EvilCorp's servers. When it becomes clear that the attack is not a DDoS at all, and that he's dealing with a much more subtle threat from within EvilCorp's infrastructure, he exclaims excitedly "Is this a R.U.D.Y. attack? This is awesome!" 
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/aNJXS9X0yY0" frameborder="0" allowfullscreen></iframe>
 
