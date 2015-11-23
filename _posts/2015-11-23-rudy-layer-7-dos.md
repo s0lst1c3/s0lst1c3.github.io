@@ -16,7 +16,7 @@ I'm a huge Mr. Robot fan. In one of the most memorable scenes of the pilot episo
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/aNJXS9X0yY0" frameborder="0" allowfullscreen></iframe>
 
-R.U.D.Y. attacks are actually a real thing, and are quite awesome indeed. They were first written about by Hybrid Security, who named their proof of concept __ru-dead-yet__ after the song by Children of Bodom. R.U.D.Y is an application layer attack. This means that unlike volume or protocol based attacks, the goal of a R.U.D.Y. is to use seemingly legitimate HTTP traffic to crash the target web server.
+R.U.D.Y. attacks are actually a real thing, and are quite awesome indeed. They were first written about by __Hybrid Security__, who named their proof of concept __ru-dead-yet__ after the song by Children of Bodom. R.U.D.Y is an application layer attack. This means that unlike volume or protocol based attacks, the goal of a R.U.D.Y. is to use seemingly legitimate HTTP traffic to crash the target web server.
 
 R.U.D.Y. is what is known as a Slow POST DoS attack. Slow POSTs work by sending a legitimate HTTP header to the target server, then sending the HTTP body slowly enough to consume an entire thread on the target for an extended period of time. R.U.D.Y. attacks do this by setting the Content-Length field in the HTTP header to an extremely high value, then sending the POST data one byte at a time while the target server waits for the entire request to complete. 
 
