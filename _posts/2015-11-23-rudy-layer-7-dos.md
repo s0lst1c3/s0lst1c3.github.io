@@ -224,7 +224,7 @@ from argparse import ArgumentParser
 MAX_CONNECTIONS      = 50
 SLEEP_TIME           = 10
 PROXY_ADDRESS        = '127.0.0.1'
-PROXY_PORT           = 9050
+PROXY_PORT           = 9050 # default to TOR
 DEFAULT_USER_AGENT   = '%s' %\
     'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
 
