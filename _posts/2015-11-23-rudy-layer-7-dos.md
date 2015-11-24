@@ -199,7 +199,7 @@ Once we've created our configs dictionary using configure(), we start spawning c
 
 # Building RU-DEAD-YET - Everything Else
 
-The rest of the code in the script is dedicated to parsing command line arguments and setting configurations. I'm omitting a detailed explanation about how this portion of the script works for the sake of brevity. With that said, feel free to email me if you have any questions about how the script's setup code works.
+The rest of the code in the script is dedicated to parsing command line arguments and setting configurations. I'm omitting a detailed explanation about how this portion of the script works for the sake of brevity. With that said, feel free to email me if you have any questions about how the script's setup code works. You can also clone a copy of the complete project [here](http://github.com/s0lst1c3/rudydos).
 
 Our completed RUDY script should look like this:
 
