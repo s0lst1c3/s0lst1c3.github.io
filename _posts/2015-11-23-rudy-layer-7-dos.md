@@ -216,6 +216,7 @@ import random
 import time
 
 from bs4 import BeautifulSoup
+from socks import socksocket
 from urlparse import urlparse
 from multiprocessing import Process
 from argparse import ArgumentParser
