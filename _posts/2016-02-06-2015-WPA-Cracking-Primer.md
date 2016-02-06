@@ -6,7 +6,7 @@ categories:
 - scripting
 ---
 
-![Free WiFi]({{ site.baseurl }}images/wpa-cracking/free-wif am i.jpg)
+![Free WiFi]({{ site.baseurl }}/images/wpa-cracking/free-wif am i.jpg)
 
 
 # Prerequisites
@@ -71,13 +71,13 @@ Most other distributions will have a naming convention that is much less insane:
 
 To get the name of your internal wireless card, first make sure your external wireless card is unplugged. Then run __iwconfig__ in your terminal to get a list of all network adapters on your system as shown below.
 
-![listing nics 1]({{ site.baseurl }}images/wpa-cracking/list-nics1.png)
+![listing nics 1]({{ site.baseurl }}/images/wpa-cracking/list-nics1.png)
 
 Check the output of __iwconfig__ for something that looks like one of the names outlined above. That's your internal wireless adapter. In the screenshot shown above, the internal wireless card is named __wlp3s0__.
 
 We now have the name of our internal wireless card. To get the name of our external wireless card, we plug it back into our laptop and run __iwconfig__ again.
 
-![listing nics 2]({{ site.baseurl }}images/wpa-cracking/list-nics2.png)
+![listing nics 2]({{ site.baseurl }}/images/wpa-cracking/list-nics2.png)
 
 Look for the new wireless card that's been added to the list. That's the name of your external card. In the screenshot shown above, the external wireless card is named __wlp0s29u1u5__. 
 
@@ -110,7 +110,7 @@ With our external wireless card running in monitor mode, we can use airodump-ng 
 	
 The output in your terminal will look something like this.
 
-![airodump-ng]({{ site.baseurl }}images/wpa-cracking/airodump.png)
+![airodump-ng]({{ site.baseurl }}/images/wpa-cracking/airodump.png)
 
 Nearby wireless access points are listed at the top. Each wireless access point is listed with 10 fields. The fields relevent to this tutorial are listed below:
 
@@ -131,7 +131,7 @@ Nearby wireless client devices are enumerated at the bottom of airodump-ng's out
 - __Frames__ - The number of frames we have captured from the device.
 - __Probe__ - The ESSID fields of any probe requests captured from the device are listed here. This allows us to know the device's preferred networks.
 
-![airodump-ng]({{ site.baseurl }}images/wpa-cracking/airodump.png)
+![airodump-ng]({{ site.baseurl }}/images/wpa-cracking/airodump.png)
 
 We need to find an access point used by our target network. For this tutorial, we are targetting a hidden network with ESSIDs - 'WARRIOR2' and 'WARRIOR5'. There are six access points with hidden ESSIDs in our vicinity. There are six characters in 'WARRIOR5' and 'WARRIOR2'. Looking at airodump-ng's output, we can see that there is only one hidden ESSID with a length of 8 characters. Therefore we can assume that the access point listed with BSSID 74:D0:2B:3F:06:88 belongs to the target network.
 
@@ -139,7 +139,7 @@ We need to find an access point used by our target network. For this tutorial, w
 
 Once we have identified an access point belonging to the target network, we proceed to capturing the 4-way WPA hanshake by devices to authenticate with the network.
 
-![Dictionary Meme]({{ site.baseurl }}images/wpa-cracking/dictionary-meme.jpg)
+![Dictionary Meme]({{ site.baseurl }}/images/wpa-cracking/dictionary-meme.jpg)
 
 Let's start out by killing our existing airodump-ng session, then starting a targetted airodump-ng session using the following command:
 
@@ -149,7 +149,7 @@ The -c flag tells airodump-ng to only capture packets associated with access poi
 
 As soon as we run command shown above, we count to 60 then hit the space bar to pause airodump-ng's output.
 
-![targeted airodump-ng]({{ site.baseurl }}images/wpa-cracking/airodump-targeted1.png)
+![targeted airodump-ng]({{ site.baseurl }}/images/wpa-cracking/airodump-targeted1.png)
 
 Based on airodump-ng's output, we know that we were able to capture 57 beacons and 146 data packets in one minute. We can get a good estimate of network activity using the following formulas:
 
@@ -166,11 +166,11 @@ In order to perform a WPA Dictionary attack, we need to capture the 4-way WPA ha
 
 The -0 5 parameter tells aireplay-ng to send five deauth packets to the target BSSID. The -a 74:D0:2B:3F:06:88 parameter tells aireplay-ng to set the target BSSID to 74:D0:2B:3F:06:88. Finally, the name of our external wireless card is passsed as our last argument. 
 
-![handshake]({{ site.baseurl }}images/wpa-cracking/deauth.png)
+![handshake]({{ site.baseurl }}/images/wpa-cracking/deauth.png)
 
 Typically, sending 5 deauth packets is sufficient. All associated clients will disconnect for a couple of seconds, then will attempt to reauthenticate with the WPA access point. When they do, airodump-ng will automatically capture the WPA 4-way handshake, as shown below:
 
-![handshake]({{ site.baseurl }}images/wpa-cracking/handshake.png)
+![handshake]({{ site.baseurl }}/images/wpa-cracking/handshake.png)
 
 # Cracking the Capture File
 
