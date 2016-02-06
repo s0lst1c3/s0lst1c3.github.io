@@ -6,7 +6,7 @@ categories:
 - scripting
 ---
 
-![Free WiFi]({{ site.baseurl }}images/wpa-cracking/free-wif am i.jpg)
+![Free WiFi]({{ site.baseurl }}images/wpa-cracking/free-wifi.jpg)
 
 
 # Prerequisites
