@@ -217,4 +217,4 @@ That's all there is to it. At this point we can proceed to running man in the mi
 
 # Bibliography
 
-(Aircrack Docs)[http://aspj.aircrack-ng.org/]
+[Aircrack Docs](http://aspj.aircrack-ng.org/)
