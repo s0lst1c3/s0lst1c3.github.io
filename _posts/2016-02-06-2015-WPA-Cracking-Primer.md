@@ -217,5 +217,4 @@ That's all there is to it. At this point we can proceed to running man in the mi
 
 # Bibliography
 
-https://sviehb.files.wordpress.com/2011/12/viehboeck_wps.pdf
-http://aspj.aircrack-ng.org/
+(Aircrack Docs)[http://aspj.aircrack-ng.org/]
