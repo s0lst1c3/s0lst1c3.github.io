@@ -12,7 +12,7 @@ In many cases, developers faced with patching a SQL injection will attempt to be
 
 Fortunately, we don’t actually need the error output. It’s possible to get a ton of information without it.
 
-This tutorial makes use of the Blind SQL Injection challenge on the training application __Damn Vulnerable Web App__ (a.k.a. dvwa). The easiest way to install __DVWA__ is by downloading and installing it the OWASP’s Broken Web Applications (BWA) VM. You can find it [here](https://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project).
+This tutorial makes use of the Blind SQL Injection challenge on the training application __Damn Vulnerable Web App__ (a.k.a. dvwa). The easiest way to install __DVWA__ is by downloading and installing OWASP’s Broken Web Applications (BWA) VM. You can find it [here](https://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project).
 
 OWASP’s BWA VM works best with VMWare, but you can also run it using VirtualBox or Qemu. 
 
