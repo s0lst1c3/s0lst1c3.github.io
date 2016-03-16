@@ -127,9 +127,9 @@ Finally, we obtain the name of the current database and display it in column 1:
 
 # Layer 2 - Database Schema
 
-We have successfully fingerprinted the database. The next step in the exploitation process is to reverse engineer the database schema. We do this by making a UNION with the database information_schema table. The information_schema table contains information about the structure of the database itself.
+We have successfully fingerprinted the database. The next step in the exploitation process is to reverse engineer the database schema. We do this by making a UNION with the database information\_schema table. The information\_schema table contains information about the structure of the database itself.
 
-Let's make a list of all the tables and columns in the current database. Recall from the last section that the current database is named 'dvwa'. This means that we must construct a query that retrieves all table and column names where table_schema is equal to 'dvwa'. Translated into a SQL query, this logic looks like:
+Let's make a list of all the tables and columns in the current database. Recall from the last section that the current database is named 'dvwa'. This means that we must construct a query that retrieves all table and column names where table\_schema is equal to 'dvwa'. Translated into a SQL query, this logic looks like:
 
 	id=-1 UNION SELECT ALL table_name, column_name FROM information_schema.columns WHERE table_schema LIKE ‘dvwa’;#
 
