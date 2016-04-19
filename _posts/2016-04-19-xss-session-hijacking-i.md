@@ -12,7 +12,7 @@ This is not a blog on discovering XSS vulnerabilities. Rather, this is a blog on
 
 Cross site scripting allows an attacker to inject arbitrary Javascript code into a web page. When a user accesses that page, the attacker’s code can then perform a session hijacking attack. 
 
-Session hijacking attacks involve stealing a user’s session cookie, then using it to impersonate the user. This allows the attacker to gain access to restricted portions of the website, as well as escalate privileges by impersonating an administrative user. Most session hijacking attacks make use of a tool known as a Cookie Stealer.
+Session hijacking attacks involve stealing a user’s session cookie, then using it to impersonate the user. This allows the attacker to gain access to restricted portions of the website, as well as escalate privileges by impersonating an administrator. Most session hijacking attacks make use of a tool known as a Cookie Stealer.
 
 In this tutorial we will be develop three different cookie stealers of increasing complexity and effectiveness. We will also demonstrate how to use these cookie stealers to perform session hijacking attacks using a web page vulnerable to XSS.
 
