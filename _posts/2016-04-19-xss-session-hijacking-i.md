@@ -1,6 +1,6 @@
 ---
 layout: post
-title: XSS Session Hijacking Part I - All the Cookies
+title: XSS Session Hijacking Part I
 categories:
 - web hacking
 - owasp top 10
