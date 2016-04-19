@@ -10,7 +10,7 @@ categories:
 
 This is not a blog on discovering XSS vulnerabilities. Rather, this is a blog on what to inject into an XSS vulnerability once you have found it. 
 
-Cross site scripting allows an attacker to execute arbitrary Javascript code into a web page. When a user accesses that page, the attacker’s code can then perform a session hijacking attack. 
+Cross site scripting allows an attacker to inject arbitrary Javascript code into a web page. When a user accesses that page, the attacker’s code can then perform a session hijacking attack. 
 
 Session hijacking attacks involve stealing a user’s session cookie, then using it to impersonate the user. This allows the attacker to gain access to restricted portions of the website, as well as escalate privileges by impersonating an administrative user. Most session hijacking attacks make use of a tool known as a Cookie Stealer.
 
