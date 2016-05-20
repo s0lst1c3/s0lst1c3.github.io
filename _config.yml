@@ -1,5 +1,6 @@
 # Dependencies
 markdown:            redcarpet
+#markdown:            kramdown
 highlighter:         pygments
 
 # Permalinks
@@ -29,3 +30,5 @@ version:             2.0
 github:				http://github.com/s0lst1c3
 twitter:			http://twitter.com/s0lst1c3
 linkedin:           http://linkedin.com/ms08067
+
+future: true
