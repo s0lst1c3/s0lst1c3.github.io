@@ -3,10 +3,9 @@ layout: post
 title: XSS Session Hijacking Part II
 categories:
 - web hacking
-- owasp top 10
 ---
 
-In Part I of this series, we learned how to create two modern cookie stealers for stealthily carrying out session hijacking attacks. Although highly effective in many cases, both cookie stealers are useless against websites that employ HttpOnly session cookies.
+In Part I of this series, we learned how to create two modern cookie stealers for stealthily carrying out session hijacking attacks. Although highly effective in many cases, both cookie stealers were useless against websites that employ HttpOnly session cookies.
 
 In this tutorial, we're not going to be focusing on stealing sessions. Instead, we're going to learn how to log keystrokes in realtime using WebSockets, as well as map keystrokes to specific DOM elements.
 
@@ -14,12 +13,12 @@ In this tutorial, we're not going to be focusing on stealing sessions. Instead, 
 > -- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
 
 
-As the previous tutorial, we're going to be using Python and Flask on the backend as well as JavaScript on the frontend. Additionally, we're going to be using Flask-SocketIO and gevent on our server. For a solid overview of how to use WebSockets with Flask, check out this [awesome post by Miguel Grinberg](http://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent).
+As in the previous tutorial, we're going to be using Python and Flask on the backend as well as JavaScript on the frontend. Additionally, we're going to be using Flask-SocketIO and gevent on our server. For a solid overview of how to use WebSockets with Flask, check out this [awesome post by Miguel Grinberg](http://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent).
 
 
 # Project Setup
 
-Let's start out by creating our project directory structure. We'll also create blank versions of the files we'll be creating later.
+Let's start out by creating our project directory structure.
 
 	mkdir -p keylogger/templates
 	touch keylogger/run.py keylogger/tables.py keylogger/templates/wsk.js
@@ -48,11 +47,11 @@ Finally, we install all dependencies enumerated in our pip.req file.
 
 # WebSockets frontend
 
-Now that are project has been setup, we can start coding the keylogger's frontend. The keylogger frontend is the JavaScript code that will be injected into the target page to send keystrokes back to our server. This code should go in the following file:
+Now that the project has been setup, we can start coding the keylogger's frontend. The frontend is the JavaScript code that will be injected into the target page to send keystrokes back to our server. This code should go in the following file:
 
 	keylogger/templates/wsk.js
 
-We start out by creating our onload function. This function will initialize our keylogger everytime the infected page is loaded. Our onload function starts out by getting a list of every input tag on the target page. It then adds an event listener to each one, passing logKeystroke as a callback. Our logKeystroke function, the callback, gets executed everytime a 'keydown' event occurs. We will define it later in this tutorial. We then set our WebSockets namespace and initiate a WebSocket connection with the server. Finally, we set up an event handler for 'connect' events emitted from the server.
+We start out by creating our onload function. This function will initialize our keylogger when the infected page is loaded. The onload function begins by obtaining a list of every input tag on the target page. It then adds an event listener to each tag, passing logKeystroke as a callback. Our logKeystroke function, the callback, gets executed each time a 'keydown' event occurs. We will define logKeystroke later in this tutorial. We then set our WebSockets namespace and initiate a WebSocket connection with the server. Finally, we set up an event handler for 'connect' events emitted from the server.
 
 {% highlight javascript %}
 
@@ -91,7 +90,7 @@ Jinja allows us to define variables from our backend Python code and use them wi
 
 ##Logging Keystrokes
 
-Next we define our logKeystroke function. The logKeystroke function takes a single parameter, event, which represents the event of a key being depressed on the keyboard. We grab the keyCode from the event, and send it back to the server along with other information about the context in which the keystroke occurred.
+Next we define our logKeystroke function. The logKeystroke function takes a single parameter, event, which represents the event of a key being pressed on the keyboard. We grab the keyCode from the event, and send it back to the server along with other information about the context in which the keystroke occurred.
 	
 {% highlight javascript %}
 
@@ -132,7 +131,8 @@ We not only want to know what key was pressed, but where the cursor was located 
 	the quick brown fox jumps over the lazy doge
 	
 If the user's cursor is located at the end of the string, and the user  hits the 'a' key with the shift key depressed, then the text should be updated to look like this: 
-		the quick brown fox jumps over the lazy dogeA
+
+	the quick brown fox jumps over the lazy dogeA
 	
 Otherwise if the user's cursor is located at the beginning of the string, the text should look like this:
 
@@ -146,7 +146,7 @@ Finally, we need to deal with the case in which the user has highlighted a porti
 
 		the A brown fox jumps over the lazy doge
 
-Fortunately, it's actually relatively simple to account for all of these cases. Each keypress event has both 'selectionStart' and 'selectionEnd' attributes that corresponds to the start and end indexes of the text the user has selected. If the user has no text selected, then the 'selectionStart' and 'selectionEnd' attributes are both set to the position of the cursor. 
+Fortunately, JavaScript makes it relatively easy to account for all of these cases. Each keypress event has both 'selectionStart' and 'selectionEnd' attributes that correspond to the start and end indexes of the text the user has selected. If the user has no text selected, then the 'selectionStart' and 'selectionEnd' attributes are both set to the position of the cursor. 
 
 
 The complete wsk.js file should look like this:
@@ -196,11 +196,11 @@ The complete wsk.js file should look like this:
 
 #Keycode lookup table
 
-With our frontend out of the way, it's time to start thinking about how to put together our serverside code. Our first task on the backend is to create a system that efficiently translates numerical keycodes and shift combinations into readable characters. To do this, we use a lookup table system that we will implement in the following file:
+With our frontend out of the way, it's time to start thinking about how to put together our keylogger's server. Our first task on the backend is to create a system that efficiently translates numerical keycodes and shift combinations into readable characters. To do this, we use a lookup table system that we will implement in the following file:
 
 	keylogger/tables.py
 
-Each key on the keyboard maps to a unique keycode. In order to make sense of what the user is typing, we need to map this keycode to a printable character. To do this, we simply use a lookup table like the one shown below. Each numerical keycode is treated as an index to the NumPy array, at which the keycode's corresponding printable character is stored. We use a NumPy array to get a true O(1) lookup time for each character. Since the lookup table is pretty long, the greater portion of the table is not shown. However, you can see it in the full source code included at the end of this tutorial.
+Each key on the keyboard maps to a unique keycode. In order to make sense of what the user is typing, we need to map this keycode to a printable character. To do this, we simply use a lookup table like the one shown below. Each numerical keycode is treated as an index to a NumPy array, at which the keycode's corresponding printable character is stored. We use a NumPy array to get a true O(1) lookup time for each character. Since the lookup table is pretty long, the greater portion of the table is not shown. However, you can see it in the full source code included at the end of this tutorial.
 
 {% highlight python %}
 
@@ -237,7 +237,7 @@ Each key on the keyboard maps to a unique keycode. In order to make sense of wha
 
 {% endhighlight %}
 
-Simply mappinge each keycode to a character is not enough. Since each keycode may represent a different character depending on whether or not the shift key is pressed, we need to define a second lookup table that maps each character on the keyboard to its alt character, provided the character has one.
+Simply mapping each keycode to a character is not enough. Since each keycode may represent a different character depending on whether or not the shift key is pressed, we need to define a second lookup table that maps each character on the keyboard to its alt character, provided the character has one.
 
 {% highlight python %}
 
@@ -284,11 +284,11 @@ Finally, we add a function that checks to see if a keycode maps to a printable c
 
 {% endhighlight %}
 
-The complete tables.py pretty long, but if you want to check out the whole thing it's included with the source code at the end of the tutorial.
+The complete tables.py is pretty long, but if you want to check out the whole thing it's included with the source code at the end of the tutorial.
 
 # WebSockets backend
 
-With our frontend and lookup tables complete, it's time to write the backend code for our keylogger's server component. Let's start by opening the following file.
+With lookup tables and frontend complete, it's time to write the backend code for the server. Let's start by opening the following file.
 
 	keylogger/run.py
 
@@ -313,7 +313,7 @@ We then set two global variables, __LHOST__ and __LPORT__, that are used to conf
 
 {% endhighlight %}
 
-Flask normally sends a lot of output to stdout. This is an awesome feature for debugging a web application. However, we want stdout to be reserved for displaying keystrokes. To do this, we use Python's logging module to send all log output to a logfile.
+Flask normally sends a lot of output to stdout. This is an awesome feature for debugging a web applicationss. However, we want stdout to be reserved for displaying keystrokes. To do this, we use Python's logging module to send all log output to a logfile.
 
 {% highlight python %}
 
@@ -321,7 +321,7 @@ logging.basicConfig(filename='wskeylogger.log', level=logging.INFO)
 
 {% endhighlight %}
 
-We then instantiate our Flask application, patch it with Flask-CORS, and then use it to create a new SocketIO object. We also create a global dictionary, __input_tags__, that will be used to keep track of the current state of every input tag on the target page.
+We then instantiate our Flask application and use it to create a new SocketIO object. We also create a global dictionary, __input_tags__, that will be used to keep track of the current state of every input tag on the target page.
 
 {% highlight python %}
 
@@ -379,7 +379,7 @@ def keydown(message):
 
 {% endhighlight %}
 	
-We use the input tag's name attribute to identify what field the user is typing into. There are far more accurate and reliable ways of doing this. However, we avoid using them for the sake of keeping this tutorial straightforward. We first check to see if the name is already in our input_tags dictionary. If it is not, then we add a new entry to the dictionary such that the name of the input tag maps to an empty list. This list will later contain the contents of the input field the user is typing into. We then set a variable 'contents' to point to the list mapped to by the name attribute. When 'contents' is modified, input_tags[name] will be modified as well.
+We use the input tag's name attribute to identify what field the user is typing into. There are far more accurate and reliable ways of doing this. However, we avoid using them for the sake of keeping this tutorial straightforward. We first check to see if the name is already in our __input_tags__ dictionary. If it is not, then we add a new entry to the dictionary such that the name of the input tag maps to an empty list. This list will later contain the contents of the input field the user is typing into. We then set a variable 'contents' to point to the list mapped to by the name attribute. When 'contents' is modified, input_tags[name] will be modified as well.
 
 {% highlight python %}
 
