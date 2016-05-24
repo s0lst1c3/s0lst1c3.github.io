@@ -1,12 +1,12 @@
 ---
 layout: post
-title: PoC - Reflected XSS Attack Using Frames
+title: PoC - Reflected XSS Attack Through iFrame
 categories:
 - reflected xss
 - web hacking
 ---
 
-Imagine we are targetting an instance of __Damn Vulnerable Web App__ on an enterprise network. In addition to DVWA, there is an instance of Web Cal running on another server. The Web Cal instance is vulnerable to clickjacking. To gain access to DVWA, we can create a malicious web page that masquerades as the Web Cal instance using an iframe. We then could place a second iframe into the page that executes a reflected XSS attack against the target DVWA instance on page load. We could then use social engineering to trick a user into navigating to our fake Web Cal page, and by doing so steal the user's DVWA session. 
+Imagine we are targetting an instance of __Damn Vulnerable Web App__ on an enterprise network. In this totally realistic scenarior, there is also an instance of Web Cal running on the same network. The Web Cal instance is vulnerable to clickjacking. To gain access to DVWA, we can create a malicious web page that masquerades as the Web Cal instance using an iframe. We then could place a second iframe into the page that executes a reflected XSS attack against the target DVWA instance on page load. We could then use social engineering to trick a user into navigating to our fake Web Cal page, and by doing so steal the user's DVWA session. 
 
 On my lab network, the attacking machine is located at 192.168.1.169. Both the DVWA instance and Web Cal are running on a shared server with an IP of 192.168.1.30. When you see these addresses in the tutorial, remember to substitute them for your own.
 
@@ -154,6 +154,7 @@ Now for the finishing touches of our attack. Let's get rid of John Cena and aim 
 
 Tailing /var/log/httpd/error.log while making a request to http://localhost/ reveals that something isn't quite right. No record of our attempt to access the invalid image file shows up in our logs, which tells us that the request never happened in the first place.
 
+![oops]({{ site.baseurl }}images/iframes/log-nope.png)
 
 To learn why, we look at the source code of our loaded iframe. Notice how the image that we tried to write to the server does not contain any cookies. Instead, we see the following value for the tag's source attribute.
 
@@ -169,7 +170,12 @@ The problem is that since the image tag is being passed in through the URL, our 
 {% endraw %} 
 {% endhighlight %}
 
-Tailing our log file while reloading the page once again, we see that the image request has gone through successfully. Awesome. Now all we have to do is modify the image url slightly so that it passes the value as a GET parameter.
+Tailing our log file while reloading the page once again, we see that the image request has gone through successfully. 
+
+![oops]({{ site.baseurl }}images/iframes/log-win.png)
+
+Awesome. Now all we have to do is modify the image url slightly so that it passes the victim's cookies as a GET parameter.
+
 
 {% highlight html %}
 {% raw %} 
@@ -226,4 +232,6 @@ The mechanics behind the session hijacking attack are tested and complete. Now w
 {% endhighlight %}
 
 Here's a quick video on how the attack could play out. In the video, an email is sent to an administrator complaining that the Wiki page is down. The administrator opens the email, clicks the link, and navigates to what appears to be the Wiki page. The administrator's session is stolen, and the administrator navigates away from the page believing that the ticket is a false alarm.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/--9faUnC-k4" frameborder="0" allowfullscreen></iframe>
 
