@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PoC - Reflected XSS Attack Through iFrame
+title: Reflected XSS Attack Through iFrame
 categories:
 - reflected xss
 - web hacking
