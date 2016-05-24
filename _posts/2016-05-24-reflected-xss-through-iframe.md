@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reflected XSS Attack Through iFrame
+title: Reflected XSS Through iFrame
 categories:
 - reflected xss
 - web hacking
