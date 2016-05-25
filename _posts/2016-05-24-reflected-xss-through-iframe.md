@@ -6,7 +6,7 @@ categories:
 - web hacking
 ---
 
-Imagine we are targeting an instance of __Damn Vulnerable Web App__ on an enterprise network. In this totally realistic scenarior, there is also an instance of Web Cal running on the same network. The Web Cal instance is vulnerable to clickjacking. To gain access to DVWA, we can create a malicious web page that masquerades as the Web Cal instance using an iframe. We then could place a second iframe into the page that executes a reflected XSS attack against the target DVWA instance on page load. We could then use social engineering to trick a user into navigating to our fake Web Cal page, and by doing so steal the user's DVWA session. 
+Imagine we are targeting an instance of __Damn Vulnerable Web App__ on an enterprise network. In this totally realistic scenario, there is also an instance of Web Cal running on the same network. The Web Cal instance is vulnerable to clickjacking. To gain access to DVWA, we can create a malicious web page that masquerades as the Web Cal instance using an iframe. We then could place a second iframe into the page that executes a reflected XSS attack against the target DVWA instance on page load. We could then use social engineering to trick a user into navigating to our fake Web Cal page, and by doing so steal the user's DVWA session. 
 
 On my lab network, the attacking machine is located at 192.168.1.169. Both the DVWA instance and Web Cal are running on a shared server with an IP of 192.168.1.30. When you see these addresses in the tutorial, remember to substitute them for your own.
 
@@ -126,7 +126,7 @@ We then try to access our index.html page. If we see John Cena inside the iframe
 
 Uh oh! Check out the results above. Simply escaping the double quotes for our image tag's source does not seem to be working. 
 
-To fix this problem, we need to use html entities for the quotes in the image tag. We modify the iframe we added to index.html to look like this:
+To fix this problem, we need to use html entities for the quotes in the image tag. We modify the iframe we added to index.html so that it look like this:
 
 {% highlight html %}
 {% raw %} 
@@ -142,7 +142,7 @@ Success! John Cena has entered the iframe.
 
 #Step 4
 
-Now for the finishing touches of our attack. Let's get rid of John Cena and aim our image's src to a a non existent image tag on our server. We'll attempt to set the filename to the victim's cookie. If all goes according to plan, the user's cookie should show up in our httpd error log.
+Now for the finishing touches of our attack. Let's get rid of John Cena and aim our image's src to a a nonexistent image tag on our server. We'll attempt to set the filename to the victim's cookie. If all goes according to plan, the user's cookie should show up in our httpd error log.
 
 {% highlight html %}
 {% raw %} 
@@ -231,7 +231,7 @@ The mechanics behind the session hijacking attack are tested and complete. Now w
 {% endraw %} 
 {% endhighlight %}
 
-Here's a quick video on how the attack could play out. In the video, an email is sent to an administrator complaining that the Wiki page is down. The administrator opens the email, clicks the link, and navigates to what appears to be the Wiki page. The administrator's session is stolen, and the administrator navigates away from the page believing that the ticket is a false alarm.
+Here's a quick video demonstrating how the attack could play out. In the video, an email is sent to an administrator complaining that the Wiki page is down. The administrator opens the email, clicks the link, and navigates to what appears to be the Wiki page. The administrator's session is stolen, and the administrator navigates away from the page believing that the ticket is a false alarm.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZlV3fb8bnus" frameborder="0" allowfullscreen></iframe>
 
