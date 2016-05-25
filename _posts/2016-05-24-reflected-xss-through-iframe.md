@@ -6,7 +6,7 @@ categories:
 - web hacking
 ---
 
-Imagine we are targetting an instance of __Damn Vulnerable Web App__ on an enterprise network. In this totally realistic scenarior, there is also an instance of Web Cal running on the same network. The Web Cal instance is vulnerable to clickjacking. To gain access to DVWA, we can create a malicious web page that masquerades as the Web Cal instance using an iframe. We then could place a second iframe into the page that executes a reflected XSS attack against the target DVWA instance on page load. We could then use social engineering to trick a user into navigating to our fake Web Cal page, and by doing so steal the user's DVWA session. 
+Imagine we are targeting an instance of __Damn Vulnerable Web App__ on an enterprise network. In this totally realistic scenarior, there is also an instance of Web Cal running on the same network. The Web Cal instance is vulnerable to clickjacking. To gain access to DVWA, we can create a malicious web page that masquerades as the Web Cal instance using an iframe. We then could place a second iframe into the page that executes a reflected XSS attack against the target DVWA instance on page load. We could then use social engineering to trick a user into navigating to our fake Web Cal page, and by doing so steal the user's DVWA session. 
 
 On my lab network, the attacking machine is located at 192.168.1.169. Both the DVWA instance and Web Cal are running on a shared server with an IP of 192.168.1.30. When you see these addresses in the tutorial, remember to substitute them for your own.
 
