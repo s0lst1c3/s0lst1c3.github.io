@@ -233,5 +233,5 @@ The mechanics behind the session hijacking attack are tested and complete. Now w
 
 Here's a quick video on how the attack could play out. In the video, an email is sent to an administrator complaining that the Wiki page is down. The administrator opens the email, clicks the link, and navigates to what appears to be the Wiki page. The administrator's session is stolen, and the administrator navigates away from the page believing that the ticket is a false alarm.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/--9faUnC-k4" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZlV3fb8bnus" frameborder="0" allowfullscreen></iframe>
 
