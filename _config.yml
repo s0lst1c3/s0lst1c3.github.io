@@ -12,7 +12,7 @@ relative_permalinks: false
 # Setup
 title:               solstice.me
 tagline:             ''
-description:         "My name is Gabriel Ryan. I'm an aspiring offensive security R&D, and this is my blog."
+description:         "Pentesting, Offensive Security Research & Development, Python Junkie and Coffee Addict. #Hacking 247."
 url:                 http://solstice.me
 baseurl:             /
 paginate:            7
