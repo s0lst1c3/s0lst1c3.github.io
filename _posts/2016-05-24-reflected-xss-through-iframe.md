@@ -76,7 +76,7 @@ Now that we have identified a means to reflect scripts off of the page, let's tr
 
 ![john cena](http://www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/John_Cena_bio.png)
 
-The following url should successfully load the image. We can't just straight up drop an image tag into the page, because doing so would not allow us to include the user's session cookie in the image tag. Insted we write the image tag to the DOM using a script tag.
+The following url should successfully load the image. We can't just straight up drop an image tag into the page, because doing so would not allow us to include the user's session cookie in the image tag. Instead we write the image tag to the DOM using a script tag.
 
 {% raw %} 
 	http://192.168.1.30/dvwa/vulnerabilities/xss_r/?name=<ScrIpt>document.write('<img src=\"http://www.wwe.com/f/styles/wwe_large/public/rd-talent/Bio/John_Cena_bio.png\"></img>')</sCriPt>#
