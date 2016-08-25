@@ -2,7 +2,6 @@
 layout: post
 title: Reflected XSS Through iFrame
 categories:
-- reflected xss
 - web hacking
 ---
 
