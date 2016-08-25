@@ -3,7 +3,6 @@ layout: post
 title: Hacking Blindfolded - Exploiting SQL injections with no error output
 categories:
 - web hacking
-- sqli
 ---
 
 ![Jedi](http://33.media.tumblr.com/56e063d50ae646cfc69dc6da74321b68/tumblr_nk2rndy28N1u8r6nao1_500.gif)
