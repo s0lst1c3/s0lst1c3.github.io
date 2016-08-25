@@ -3,9 +3,7 @@ layout: post
 title: Layer 7 Denial of Service - R.U.D.Y.
 categories:
 - python
-- dos
-- scripting
-- network defense
+- network security
 ---
 
 #Intro to R.U.D.Y. attacks
