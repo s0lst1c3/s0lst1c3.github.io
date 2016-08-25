@@ -3,6 +3,7 @@ layout: post
 title: XSS Session Hijacking Part II
 categories:
 - web hacking
+- python
 ---
 
 In Part I of this series, we learned how to create two modern cookie stealers for stealthily carrying out session hijacking attacks. Although highly effective in many cases, both cookie stealers were useless against websites that employ HttpOnly session cookies.
