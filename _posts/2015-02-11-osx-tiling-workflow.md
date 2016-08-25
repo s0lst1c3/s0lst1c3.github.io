@@ -2,9 +2,7 @@
 layout: post
 title: OSX Tiling Workflow
 categories:
-- osx
-- workflow
-- javascript
+- misc
 ---
 
 I love tiling window managers. My absolute favorite is Awesome, which is available for both Linux and BSD. When I started spending more time in the OSX environment about a month ago, it quickly became apparent that keyboard centered workflows were a scarcity. Even worse, true tiling solutions for OSX were virtually nonexistent.
