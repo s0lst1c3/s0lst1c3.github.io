@@ -3,6 +3,7 @@ layout: post
 title: XSS Session Hijacking Part I
 categories:
 - web hacking
+- python
 ---
 
 ![pwnt]({{ site.baseurl }}images/cookie-stealers/no-redirect/no-redirect-pwnt.png)
