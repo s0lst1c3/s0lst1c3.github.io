@@ -4,7 +4,6 @@ title: Rogue AP Attacks Part 1 - Evil Twin
 categories:
 - python
 - wireless
-- scripting
 ---
 
 An Evil Twin is a wireless attack that works by impersonating a legitimate wireless access point. So long as the malicious access point has a stronger signal strength than its legitimate counterpart, all devices connected to the target AP will drop and connect to the attacker. The attacker can then act as a router between the connected devices and a network gateway, establishing a man-in-the-middle scenario. With the exception of karma attacks and the use of SDR, this is one of the most effective wireless attacks in practice today. It's also relatively simple to implement, as we're about to see. You can execute these attacks from over a quarter of a mile away with the right equipment.
