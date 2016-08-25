@@ -2,10 +2,8 @@
 layout: post
 title: Webapp Enumeration with Waldo
 categories:
-- tools
+- projects
 - web hacking
-- enumeration
-- red team labs
 ---
 
 At Red Team Labs, we find ourselves using DirBuster a lot. It's a pretty
