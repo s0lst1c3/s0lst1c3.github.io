@@ -2,8 +2,7 @@
 layout: post
 title: WPA Cracking Primer - Aircrack
 categories:
-- wireless
-- scripting
+- wireless security
 ---
 
 ![Free WiFi]({{ site.baseurl }}images/wpa-cracking/free-wifi.jpg)
