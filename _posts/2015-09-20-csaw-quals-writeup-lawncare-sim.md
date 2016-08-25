@@ -3,7 +3,6 @@ layout: post
 title: CSAW Quals 2015 - Lawn Care Simulator Writeup
 categories:
 - web hacking
-- csaw quals 2015
 - writeups
 ---
 
