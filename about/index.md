@@ -9,6 +9,7 @@ Conference Talks
 ----------------
 
 Slaying Rogue Access Points With Python And Cheap Hardware:
+
 - [BSides Huntsville - February 2016](https://www.youtube.com/watch?v=TPiAOsAOJzo&t=1s)
 - [BSides SLC - March 19th 2016](https://www.youtube.com/watch?v=5OXGizqZjUc&t=419s)
 - [DEFCON 24 Wireless Village - August 2016](https://www.youtube.com/watch?v=dtNUFGnToQs)
