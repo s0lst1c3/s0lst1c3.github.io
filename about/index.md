@@ -49,10 +49,10 @@ Tripwire: State of Security:
 Tools
 -----
 
-- [sentrygun](https://github.com/s0lst1c3/sentrygun)
-- [sentrygun-server](https://github.com/s0lst1c3/sentrygun-server)
-- [eaphammer](https://github.com/s0lst1c3/eaphammer)
-- [sentrygun](https://github.com/s0lst1c3/sentrygun)
+- [Sentrygun - Wireless IDS System](https://github.com/s0lst1c3/sentrygun)
+- [Sentrygun-Server - Wireless IDS System](https://github.com/s0lst1c3/sentrygun-server)
+- [Eaphammer - WPA2-Enterprise Exploitation Toolkit](https://github.com/s0lst1c3/eaphammer)
+- [GameWarden - Data Driven Recon For Red Team Assessments](https://github.com/s0lst1c3/eaphammer)
 
 Red Team Labs:
 
@@ -60,5 +60,5 @@ Red Team Labs:
 
 GDS Security:
 
-- [sentrygun](https://github.com/gdssecurity/sentrygun)
-- [sentrygun-server](https://github.com/gdssecurity/sentrygun-server)
+- [Sentrygun - Wireless IDS System](https://github.com/gdssecurity/sentrygun)
+- [Sentrygun-Server - Wireless IDS System](https://github.com/gdssecurity/sentrygun-server)
