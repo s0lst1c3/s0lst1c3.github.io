@@ -3,7 +3,7 @@ title: About
 layout: page
 ---
 
-My name is Gabriel Ryan. I'm a pentester, CTF player, and security researcher. This is my blog. I currently work for [Gotham Digital Science](https://gdssecurity.com), where I provide research and consulting capabilities for a diverse range of clients. Previously I've worked as a pentester and researcher for the Virginia-based defense contractor OGSystems, and as a systems programmer for Rutgers University. I'm also a member of the BSides Las Vegas senior staff, coordinating wireless security for the event. In my spare time, I enjoy live music and motorcycles.
+My name is Gabriel Ryan. I'm a pentester, CTF player, and security researcher. This is my blog. I currently work for [Gotham Digital Science](https://www.gdssecurity.com), where I provide research and consulting capabilities for a diverse range of clients. Previously I've worked as a pentester and researcher for the Virginia-based defense contractor OGSystems, and as a systems programmer for Rutgers University. I'm also a member of the BSides Las Vegas senior staff, coordinating wireless security for the event. In my spare time, I enjoy live music and motorcycles.
 
 Conference Talks
 ----------------
