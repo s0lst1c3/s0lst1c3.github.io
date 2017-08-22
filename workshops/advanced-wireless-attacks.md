@@ -16,6 +16,7 @@ Course Highlights include:
 
 This online version of the course will be taught exclusively through a comprehensive course guide that is available for download below. The material covered in the course guide is supplemented by hands-on lab exercises within the course's virtual lab environment. Instructions on setting up the virtual lab environment are also included. Feel free to reach out to the instructor [here](http://solstice.me/contact/) with questions and guidance. 
 
-#Pre-Requisites
+Pre-Requisites
+--------------
 
 A previous wireless security background is helpful but not required. You'll also need a laptop with at least 8 gb of RAM that is capable of running VirtualBox or VMWare. Additional hardware requirements can be in the Lab Setup Guide included below.
