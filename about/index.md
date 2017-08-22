@@ -8,22 +8,34 @@ My name is Gabriel Ryan. I'm a pentester, CTF player, and security researcher. T
 Conference Talks
 ----------------
 
+The Black Art of Wireless Post-Exploitation: Bypassing Port-Based Access Controls Using Indirect Wireless Pivots
+
+- [DEF CON 25](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Gabriel-Ryan-The-Black-Art-of-Wireless-Post-Exploitation-UPDATED.pdf)
+- [BSides Las Vegas 2017](https://www.peerlyst.com/posts/bsideslv-2017-the-black-art-of-wireless-post-exploitation-gabriel-ryan)
+- [44con 2017](https://44con.com/44con/44con-2017/talks-2017/)
+
+Beyond Wardriving: Tracking Human Beings With RF Technology:
+
+- [BSides SLC - March 10th 2017](https://bsidesslc2017.sched.com/event/9Z2Y/beyond-wardriving-tracking-human-beings-with-rf-technology)
+
 Slaying Rogue Access Points With Python And Cheap Hardware:
 
 - [BSides Huntsville - February 2016](https://www.youtube.com/watch?v=TPiAOsAOJzo&t=1s)
 - [BSides SLC - March 19th 2016](https://www.youtube.com/watch?v=5OXGizqZjUc&t=419s)
 - [DEFCON 24 Wireless Village - August 2016](https://www.youtube.com/watch?v=dtNUFGnToQs)
 
-Beyond Wardriving: Tracking Human Beings With RF Technology:
-
-- [BSides SLC - March 10th 2017](https://bsidesslc2017.sched.com/event/9Z2Y/beyond-wardriving-tracking-human-beings-with-rf-technology)
 
 Workshops
 ---------
 
 Advanced Wireless Attacks Against Enterprise Networks:
 
-- [BSides SLC - March 9th 2017](https://bsidesslc2017.sched.com/event/9Z3J/advanced-wireless-attacks-against-enterprise-networks)
+- DEF CON 25
+- BSides Las Vegas 2017
+- BSides SLC 2017
+
+- [Course Guide](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Gabriel-Ryan-Advanced-Wireless-Attacks-Against-Enterprise-Networks-Course-Guide.pdf)
+- [Lab Setup Guide](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Gabriel-Ryan-Advanced-Wireless-Attacks-Against-Enterprise-Networks-Course-Guide.pdf)
 
 Whitepapers
 -----------
