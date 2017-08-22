@@ -8,7 +8,7 @@ My name is Gabriel Ryan. I'm a pentester, CTF player, and security researcher. T
 Conference Talks
 ----------------
 
-The Black Art of Wireless Post-Exploitation: Bypassing Port-Based Access Controls Using Indirect Wireless Pivots
+The Black Art of Wireless Post-Exploitation: Bypassing Port-Based Access Controls Using Indirect Wireless Pivots:
 
 - [DEF CON 25](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Gabriel-Ryan-The-Black-Art-of-Wireless-Post-Exploitation-UPDATED.pdf)
 - [BSides Las Vegas 2017](https://www.peerlyst.com/posts/bsideslv-2017-the-black-art-of-wireless-post-exploitation-gabriel-ryan)
