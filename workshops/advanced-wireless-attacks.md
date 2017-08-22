@@ -25,4 +25,5 @@ Course Materials
 ----------------
 
 [Course Guide](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Gabriel-Ryan-Advanced-Wireless-Attacks-Against-Enterprise-Networks-Course-Guide.pdf)
+
 [Lab Setup Guide](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Gabriel-Ryan-Advanced-Wireless-Attacks-Against-Enterprise-Networks-Lab-Setup-Guide.pdf)
