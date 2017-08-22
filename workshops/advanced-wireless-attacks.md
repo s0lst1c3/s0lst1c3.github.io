@@ -1,6 +1,6 @@
 ---
 title: Advanced Wireless Attacks Against Enterprise Networks
-layout: page
+layout: post
 ---
 
 #Advanced Wireless Attacks Against Enterprise Networks
