@@ -239,6 +239,11 @@ img {
   border-radius: 5px;
 }
 
+img[alt=aboutprofilepicture] {
+
+	width: 50%;
+}
+
 /* 
  * Tables 
  *
