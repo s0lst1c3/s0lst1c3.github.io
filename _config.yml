@@ -14,7 +14,7 @@ title:               solstice.sh
 tagline:         "Pentesting, Offensive Security Research & Development"
 description:         "Pentesting, Offensive Security Research & Development, Python Junkie and Coffee Addict. #Hacking 247."
 url:                 http://solstice.sh
-baseurl:             /
+baseurl:             
 paginate:            7
 
 # About/contact
