@@ -3,7 +3,7 @@ title: About
 layout: about
 ---
 
-![aboutprofilepicture]({{ site.baseurl }}images/solstice-sh-profile.jpg)
+![aboutprofilepicture](http://solstice.sh/images/solstice-sh-profile.jpg)
 
 Gabriel Ryan - Security Consultant @ [Gotham Digital Science](https://www.gdssecurity.com)
 
@@ -24,7 +24,7 @@ Gabriel Ryan - Security Consultant @ [Gotham Digital Science](https://www.gdssec
 
 ## Conference Talks
 
-See [solstice.sh/presentations]({{ site.baseurl }}presentations) and [solstice.sh/workshops]({{ site.baseurl }}workshops).
+See [solstice.sh/presentations](http://solstice.sh/presentations) and [solstice.sh/workshops](http://solstice.sh/workshops).
 
 ## Open Source
 

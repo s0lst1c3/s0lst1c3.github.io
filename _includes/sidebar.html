@@ -5,18 +5,18 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-      <!--<img width="125" height="125" alt="sidebar photo" src="{{ site.baseurl }}images/profile.jpg"> -->
+      <!--<img width="125" height="125" alt="sidebar photo" src="http://solstice.sh/images/profile.jpg"> -->
     <p>{{ site.description }}</p>
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="http://solstice.sh/">Home</a>
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
       `layout: page` in the front-matter. See readme for usage.
     {% endcomment %}
 
-    <a class="sidebar-nav-item{% if page.url == '/me/' %} active{% endif %}" href="{{ site.baseurl }}me/">About</a>
+    <a class="sidebar-nav-item{% if page.url == '/me/' %} active{% endif %}" href="http://solstice.sh/me/">About</a>
 
     {% assign pages_list = site.pages | sort:"url" %}
     {% for node in pages_list %}

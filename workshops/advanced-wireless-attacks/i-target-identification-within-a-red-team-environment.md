@@ -5,12 +5,12 @@ layout: workshop
 
 # Table of Contents
 
-   * [Workshop Overview]({{ site.baseurl }}workshops/advanced-wireless-attacks/)
-   * ***[I. Target Identification Within A Red Team Environment]({{ site.baseurl }}workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)***
-   * [II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks]({{ site.baseurl }}workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)
-   * [III. Wireless Man-In-The-Middle Attacks]({{ site.baseurl }}workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)
-   * [IV. SMB Relays and LLMNR/NBT-NS Poisoning]({{ site.baseurl }}workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)
-   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots]({{ site.baseurl }}workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
+   * [Workshop Overview](http://solstice.sh/workshops/advanced-wireless-attacks/)
+   * ***[I. Target Identification Within A Red Team Environment](http://solstice.sh/workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)***
+   * [II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks](http://solstice.sh/workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)
+   * [III. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)
+   * [IV. SMB Relays and LLMNR/NBT-NS Poisoning](http://solstice.sh/workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)
+   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots](http://solstice.sh/workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
 
 ---
 
@@ -24,13 +24,13 @@ Evil Corp has requested that your firm perform a full scope red team assessment 
 
 You and your team arrive at one of the client sites and perform a site-survey using airodump-ng, and see the output shown below.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/i/image-1.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/i/image-1.png)
 
 None of the networks within range have an ESSID that conclusively ties them to Evil Corp. Many of them do not broadcast ESSIDs, and as such lack any identification at all.
 
 To make matters worse, the branch location your team is scoping out is immediately adjacent to a major bank, a police station, and numerous small retail outlets. It is very likely that many of the access points that you see in your airodump-ng output belong to one of these third parties. 
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/i/image-2.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/i/image-2.png)
 
 During some engagements, you may be able to reach out to the client at this point and ask for additional verification. More likely, however, you’ll have to identify in-scope targets yourself. Let’s talk about how to do this.
 
@@ -53,11 +53,11 @@ Using Linguistic Inference during wireless recon is the process of identifying a
 
 In our airodump-ng output, you may notice groups of BSSIDs that increment sequentially. For example:
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/i/image-4.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/i/image-4.png)
 
 When you see a group of APs with BSSIDs that increment sequentially, as shown above, it usually means that they are part of the same network. If we identify one of the BSSIDs as in-scope, we can usually assume that the same is true for the rest of the BSSIDs in the sequence.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/i/image-5.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/i/image-5.png)
 
 ## OUI Prefixes
 
@@ -75,11 +75,11 @@ To perform the deauthentication attack, we use the following command:
 
 If successful, the ESSID of the affected access point will appear in our airodump-ng output.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/i/image-6.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/i/image-6.png)
 
 We have now identified six unique ESSIDs present at the client site. We can cross reference these ESSIDs with the results of similar site surveys performed at nearby client sites. Suppose we know of another Evil Corp branch office 30 miles away. After driving to the secondary location, we discover that none of the third-party entities located at the first branch office are present. Suppose that after decloaking hidden networks, we see that the following access points are within range. 
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/i/image-7.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/i/image-7.png)
 
 Out of the ESSIDs shown above, the ones that are highlighted in red were also found at the first Evil Corp location that we visited. Given the lack of common third-parties present at each of the sites, this is very strong evidence that these ESSIDs are used by Evil Corp, and are therefore in-scope.
 
@@ -87,14 +87,14 @@ Out of the ESSIDs shown above, the ones that are highlighted in red were also fo
 
 Let’s return to the first client site. Notice that the BSSIDs outlined in red increment sequentially. As previously mentioned, this usually occurs when the APs are part of the same network. We know that EC7293 is in-scope (we confirmed this using geographic cross-referencing). Given that the access points serving EC7293 and ECwnet1 are part of the same group of sequentially incrementing BSSIDs, we can conclude they are both parts of the same network. Therefore, it follows that ECwnet1 is in-scope as well.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/i/image-8.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/i/image-8.png)
 
 We’ve mapped our in-scope attack surface. Our targets will be the following access points:
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/i/image-9.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/i/image-9.png)
 
 ---
 
-### Next chapter: *[II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks]({{ site.baseurl }}workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)*
+### Next chapter: *[II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks](http://solstice.sh/workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)*
 
 ---

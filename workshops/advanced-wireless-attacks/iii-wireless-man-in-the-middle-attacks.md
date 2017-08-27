@@ -5,12 +5,12 @@ layout: workshop
 
 # Table of Contents
 
-   * [Workshop Overview]({{ site.baseurl }}workshops/advanced-wireless-attacks/)
-   * [I. Target Identification Within A Red Team Environment]({{ site.baseurl }}workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)
-   * [II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks]({{ site.baseurl }}workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)
-   * ***[III. Wireless Man-In-The-Middle Attacks]({{ site.baseurl }}workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)***
-   * [IV. SMB Relays and LLMNR/NBT-NS Poisoning]({{ site.baseurl }}workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)
-   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots]({{ site.baseurl }}workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
+   * [Workshop Overview](http://solstice.sh/workshops/advanced-wireless-attacks/)
+   * [I. Target Identification Within A Red Team Environment](http://solstice.sh/workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)
+   * [II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks](http://solstice.sh/workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)
+   * ***[III. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)***
+   * [IV. SMB Relays and LLMNR/NBT-NS Poisoning](http://solstice.sh/workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)
+   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots](http://solstice.sh/workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
 
 ---
 
@@ -22,7 +22,7 @@ Suppose we wanted to use an Evil Twin to perform a man-in-the-middle attack simi
 
 To be able to execute such an attack, we will need to expand the capabilities of our rogue access point to make it behave more like a wireless router. This means running our own DHCP server to provide IP addresses to wireless clients, as well as a DNS server for name resolution. It also means that we’ll need to use an operating system that supports packet forwarding. Finally, we’ll need a simple yet flexible utility that redirects packets from one network interface to another.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iii/wirelessmitm.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iii/wirelessmitm.png)
 
 
 # Configuring Linux As A Router
@@ -93,7 +93,7 @@ We then append a new rule to the POSTROUTING chain of the nat table. Any changes
 
 To summarize, the command shown above tells iptables to modify the source address of each packet to eth0’s external IP address and to send each packet to eth0 after this modification occurs.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iii/image-2.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iii/image-2.png)
 
 In the diagram shown above, any packets with a destination address that is different from our rogue AP’s local address will be sent to the FORWARD chain after the routing decision is made. We need to add a rule that states that any packets sent to the FORWARD chain from wlan0 should be sent to our upstream interface. The relevant command is shown below.
 
@@ -122,7 +122,7 @@ SSL Stripping was first documented by an excellent hacker known as Moxie Marlins
 
 Consequently, an encrypted tunnel is established between the attacker and the server (instead of between the victim and the server). The attacker then modifies the server’s response, converting it from HTTPS to HTTP, and forwards it to the victim. From the victim’s perspective, the server has just issued it an HTTP response [6].
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iii/sslstrip.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iii/sslstrip.png)
 
 All subsequent requests from the victim and the server will occur over an unencrypted HTTP connection with the attacker. The attacker will forward these requests over an encrypted connection with the HTTP server. Since the victim’s requests are sent to the attacker in plaintext, they can be viewed or modified by the attacker [6].
 
@@ -197,7 +197,7 @@ The following technique was first documented by LeonardoNve during his BlackHat 
 
 The user’s browser then makes a DNS request for wwww.evilcorp.com. Since all DNS traffic is proxied through the attacker, the DNS request is intercepted by the attacker. The attacker then responds using his or her own DNS server, resolving wwww.evilcorp.com to the IP address of www.evilcorp.com. The browser then makes an HTTP request for wwww.evilcorp.com. This request is intercepted by the attacker and modified so that it is an HTTPS request for www.evilcorp.com. As in the original SSL Stripping attack, an encrypted tunnel is established between the attacker and www.evilcorp.com, and the victim makes all requests to wwww.evilcorp.com over plaintext [11].
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iii/hsts-bypass.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iii/hsts-bypass.png)
 
 This technique is effective provided that certificate pinning is not used, and that the user does not notice that they are interacting with a different subdomain than the one originally requested (i.e. wwww.evil.com vs www.evilcorp.com). To deal with the second issue, an attacker should choose a subdomain that is believable within the context in which it is used (i.e. mail.evilcorp.com should be replaced with something like mailbox.evilcorp.com).  Let’s update our bash script so that it performs a partial HSTS bypass using LeonardoNve’s DNS2Proxy and SSLStrip2. We do this by first adding a line that uses iptables to redirect all DNS traffic to dns2proxy.
 
@@ -221,6 +221,6 @@ Our completed bash script can be found in your Kali VM within the ~/awae/lab4 di
 
 ---
 
-### Next chapter: *[IV. SMB Relays and LLMNR/NBT-NS Poisoning]({{ site.baseurl }}workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)*
+### Next chapter: *[IV. SMB Relays and LLMNR/NBT-NS Poisoning](http://solstice.sh/workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)*
 
 ---

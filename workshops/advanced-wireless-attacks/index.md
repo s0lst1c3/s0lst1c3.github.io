@@ -5,12 +5,12 @@ layout: page
 
 # Table of Contents
 
-   * ***[Workshop Overview]({{ site.baseurl }}workshops/advanced-wireless-attacks/)***
-   * [I. Target Identification Within A Red Team Environment]({{ site.baseurl }}workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)
-   * [II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks]({{ site.baseurl }}workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)
-   * [III. Wireless Man-In-The-Middle Attacks]({{ site.baseurl }}workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)
-   * [IV. SMB Relays and LLMNR/NBT-NS Poisoning]({{ site.baseurl }}workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)
-   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots]({{ site.baseurl }}workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
+   * ***[Workshop Overview](http://solstice.sh/workshops/advanced-wireless-attacks/)***
+   * [I. Target Identification Within A Red Team Environment](http://solstice.sh/workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)
+   * [II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks](http://solstice.sh/workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)
+   * [III. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)
+   * [IV. SMB Relays and LLMNR/NBT-NS Poisoning](http://solstice.sh/workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)
+   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots](http://solstice.sh/workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
 
 ---
 
@@ -40,6 +40,6 @@ Course Materials
 
 ---
 
-### First chapter: *[I. Target Identification Within A Red Team Environment]({{ site.baseurl }}workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)*
+### First chapter: *[I. Target Identification Within A Red Team Environment](http://solstice.sh/workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)*
 
 ---

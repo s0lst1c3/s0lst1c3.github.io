@@ -5,12 +5,12 @@ layout: workshop
 
 # Table of Contents
 
-   * [Workshop Overview]({{ site.baseurl }}workshops/advanced-wireless-attacks/)
-   * [I. Target Identification Within A Red Team Environment]({{ site.baseurl }}workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)
-   * [II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks]({{ site.baseurl }}workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)
-   * [III. Wireless Man-In-The-Middle Attacks]({{ site.baseurl }}workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)
-   * ***[IV. SMB Relays and LLMNR/NBT-NS Poisoning]({{ site.baseurl }}workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)***
-   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots]({{ site.baseurl }}workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
+   * [Workshop Overview](http://solstice.sh/workshops/advanced-wireless-attacks/)
+   * [I. Target Identification Within A Red Team Environment](http://solstice.sh/workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)
+   * [II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks](http://solstice.sh/workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)
+   * [III. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)
+   * ***[IV. SMB Relays and LLMNR/NBT-NS Poisoning](http://solstice.sh/workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)***
+   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots](http://solstice.sh/workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
 
 ---
 
@@ -34,11 +34,11 @@ Let’s perform a simple LLMNR/NBT-NS poisoning attack. To do this, we’ll be u
 
 This will tell Responder to listen for LLMNR/NBT-NS broadcast queries. Next, use your Windows AD Victim to attempt to access a share from a nonexistent hostname such as the one shown in the screenshot below. Using a nonexistent hostname forces the Windows machine to broadcast an LLMNR/NBT-NS request.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iv/ie-widget.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iv/ie-widget.png)
 
 Responder will then issue a response, causing the victim to attempt to authenticate with the Kali machine. The results are shown in the screenshot below.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iv/responding.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iv/responding.png)
 
 # Lab Exercise: LLMNR/NBT-NS Poisoning
 
@@ -48,11 +48,11 @@ Practice using Responder to perform LLMNR/NBT-NS poisoning attacks. Experiment w
 
 NTLM is a relatively simple authentication protocol that relies on a challenge/response mechanism. When a client attempts to authenticate using NTLM, the server issues it a challenge in the form of a string of characters. The client then encrypts challenge using its password hash and sends it back to the server as an NTLM response. The server then attempts to decrypt this response using the user’s password hash. If the decrypted response is identical the plaintext challenge, then the user is authenticated [15].
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iv/ntlmz0rz.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iv/ntlmz0rz.png)
 
 In an SMB Relay attack, the attacker places him or herself in a position on the network where he or she can view NTLM traffic as it is transmitted across the wire. Man-in-the-middle attacks are often used to facilitate this. The attacker then waits for a client to attempt to authenticate with the target server. When the client begins the authentication process, the attacker relays the authentication attempt to the target. This causes the target server to issue an NTLM challenge back to the attacker, which the attacker relays back to the client. The client receives the NTLM challenge, encrypts it, and sends the NTLM response back to the attacker. The attacker then relays this response back to the target server. The server receives the response, and the attacker becomes authenticated with the target.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iv/smbrelayxz0rz.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iv/smbrelayxz0rz.png)
 
 System administrators often use automated scripts to perform maintenance tasks on the network at regularly scheduled intervals. These scripts often use service accounts that have administrative privileges, and use NTLM for remote authentication. This makes them prime candidates for both SMB Relay attacks and the poisoning attacks that we learned about in the last section. Ironically, many types of security related hardware and software authenticate this way as well, including antivirus programs and agentless network access control mechanisms.
 
@@ -89,19 +89,19 @@ The traditional way to perform this attack is to establish a man-in-the-middle w
 
 With responder running, we just need to perform an action on the Windows DC virtual machine that will trigger an NTLM exchange. An easy way to do this is by attempting to access a nonexistent SMB share from the Windows DC machine as shown in the screenshot below.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iv/notashare.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iv/notashare.png)
 
 You should now see three things happen on your Kali VM. First, you’ll see Responder send a poisoned answer to your Windows DC virtual machine for the NetBIOS name of the non-existent server. 
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iv/poisoned.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iv/poisoned.png)
 
 Next, you’ll see impacket successfully execute an SMB Relay attack against the Windows AD Victim machine.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iv/relayed.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iv/relayed.png)
 
 Finally, you’ll see Metasploit deliver a payload to the Windows AD Victim machine, giving you a shell.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/iv/meterprederp.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/iv/meterprederp.png)
 
 # Lab Exercise: SMB Relay Attacks
 
@@ -115,6 +115,6 @@ As your practice this attack, you may notice that it is ineffective against the 
 
 ---
 
-### Next chapter: *[V. Firewall And NAC Evasion Using Indirect Wireless Pivots]({{ site.baseurl }}workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)*
+### Next chapter: *[V. Firewall And NAC Evasion Using Indirect Wireless Pivots](http://solstice.sh/workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)*
 
 ---

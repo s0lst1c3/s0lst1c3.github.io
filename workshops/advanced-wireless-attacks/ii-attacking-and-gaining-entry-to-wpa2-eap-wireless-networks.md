@@ -5,12 +5,12 @@ layout: workshop
 
 # Table of Contents
 
-   * [Workshop Overview]({{ site.baseurl }}workshops/advanced-wireless-attacks/)
-   * [I. Target Identification Within A Red Team Environment]({{ site.baseurl }}workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)
-   * ***[II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks]({{ site.baseurl }}workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)***
-   * [III. Wireless Man-In-The-Middle Attacks]({{ site.baseurl }}workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)
-   * [IV. SMB Relays and LLMNR/NBT-NS Poisoning]({{ site.baseurl }}workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)
-   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots]({{ site.baseurl }}workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
+   * [Workshop Overview](http://solstice.sh/workshops/advanced-wireless-attacks/)
+   * [I. Target Identification Within A Red Team Environment](http://solstice.sh/workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)
+   * ***[II. Attacking and Gaining Entry To WPA2-EAP Wireless Networks](http://solstice.sh/workshops/advanced-wireless-attacks/ii-attacking-and-gaining-entry-to-wpa2-eap-wireless-networks/)***
+   * [III. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)
+   * [IV. SMB Relays and LLMNR/NBT-NS Poisoning](http://solstice.sh/workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)
+   * [V. Firewall And NAC Evasion Using Indirect Wireless Pivots](http://solstice.sh/workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)
 
 ---
 
@@ -36,20 +36,20 @@ The EAP-PEAP authentication process is an exchange that takes place between thre
  
 Logically, authentication takes place between the supplicant and the authentication server. When a client device attempts to connect to the network, the authentication server presents the supplicant with an x.509 certificate. If the client device accepts the certificate, a secure encrypted tunnel is established between the authentication server and the supplicant. The authentication attempt is then performed through the encrypted tunnel. If the authentication attempt succeeds, the client device is permitted to associate with the target network [2][3].
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/ii/image-1.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-1.png)
 
 Without the use of the secure tunnel to protect the authentication process, an attacker could sniff the challenge and response then derive the password offline. In fact, legacy implementations of EAP, such as EAP-MD5, are susceptible to this kind of attack. However, the use of a secure tunnel prevents us from using passive techniques to steal credentials for the target network [2][3].
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/ii/image-4.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-4.png)
 
 Although we can conceptualize the EAP-PEAP authentication process as an exchange between the supplicant and the authentication server, the protocol’s implementation is a bit more complicated. All communication between the supplicant and the authentication server is relayed by the authenticator (the access point). The supplicant and the authenticator communicate using a Layer 2 protocol such as IEEE 802.11X, and the authenticator communicates with the authentication server using RADIUS, which is a Layer 7 protocol. Strictly speaking, the authentication server and supplicant do not actually communicate directly to one another at all [2][3].
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/ii/image-2.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-2.png)
 
 
 As you can imagine, this architecture creates numerous opportunities for abuse once an attacker can access the network. However, for now, we’re going to focus on abusing this authentication process to gain access to the network in the first place. Let’s revisit the EAP-PEAP authentication process, but this time in further detail.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/ii/image-3.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-3.png)
 
 The diagram above illustrates the EAP-PEAP/EAP-TTLS authentication process in full detail. When the supplicant associates, it sends an EAPOL-Start to the authenticator. The authenticator then sends an EAP-Request Identity to the supplicant. The supplicant responds with its identity, which is forwarded to the authentication server. The authentication server and supplicant then setup a secure SSL/TLS tunnel through the authenticator, and the authentication process takes place through this tunnel [2].
 
@@ -80,7 +80,7 @@ It's best to choose values for your self-signed certificate that are believable 
 
 When the Cert Wizard routine finishes, you should see output similar to what is shown in the screenshot below.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/ii/image-5.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-5.png)
 
 Once we have created a believable certificate, we can proceed to launch an Evil Twin attack against one of the target access points discovered in the last section. Let’s use eaphammer to perform an Evil Twin attack against the access point with BSSID 1c:7e:e5:97:79:b1.
 
@@ -88,11 +88,11 @@ Once we have created a believable certificate, we can proceed to launch an Evil 
 
 Provided you can overpower the signal strength of the target access point, clients will begin to disconnect from the target network and connect to your access point. Unless the affected client devices are configured to reject invalid certificates, the victims of the attack will be presented with a message similar to the one below. 
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/ii/image-7.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-7.png)
 
 Fortunately, it’s usually possible to find at least one enterprise employee who will blindly accept your certificate. It’s also common to encounter devices that are configured to accept invalid certificates automatically. In either case, you’ll soon see usernames, challenges, and responses shown in your terminal as shown below.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/ii/image-6.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-6.png)
 
 This data can be passed to asleap to obtain a valid set of RADIUS credentials.
 
@@ -100,7 +100,7 @@ This data can be passed to asleap to obtain a valid set of RADIUS credentials.
 
 Congrats. You have your first set of RADIUS creds.
 
-![evil twin attack]({{ site.baseurl }}images/workshops/awae/ii/image-8.png)
+![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-8.png)
 
 # Lab Exercise: Evil Twin Attack Against WPA2-PEAP
 
@@ -118,6 +118,6 @@ For this lab exercise, you will practice stealing RADIUS credentials by performi
 
 ---
 
-### Next chapter: *[III. Wireless Man-In-The-Middle Attacks]({{ site.baseurl }}workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)*
+### Next chapter: *[III. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)*
 
 ---
