@@ -10,6 +10,7 @@ Gabriel Ryan - Security Consultant @ [Gotham Digital Science](https://www.gdssec
 ## Work Blogs
 
 |  Gotham Digital Science |
+| [Whitepaper: The Black Art Of Wireless Post-Exploitation - Bypassing Port-Based Access Controls Using Indirect Wireless Pivots](https://blog.gdssecurity.com/labs/2017/8/31/whitepaper-the-black-art-of-wireless-post-exploitation-bypas.html) |
 | [Whitepaper: Identifying Rogue Access Point Attacks Using Probe Response Patterns and Signal Strength](http://blog.gdssecurity.com/labs/2017/1/17/whitepaper-identifying-rogue-access-point-attacks-using-prob.html) |
 | [Slaying Rogue Access Points With Python And Cheap Hardware](http://blog.gdssecurity.com/labs/2016/8/26/slaying-rogue-access-points-with-python-and-cheap-hardware.html) |
 
@@ -20,6 +21,7 @@ Gabriel Ryan - Security Consultant @ [Gotham Digital Science](https://www.gdssec
 ## Whitepapers
 
 | Gotham Digital Science |
+| [The Black Art Of Wireless Post-Exploitation - Bypassing Port-Based Access Controls Using Indirect Wireless Pivots](https://blog.gdssecurity.com/labs/2017/8/31/whitepaper-the-black-art-of-wireless-post-exploitation-bypas.html) |
 | [Identifying Rogue Access Point Attacks Using Probe Response Patterns And Signal Strength](https://github.com/gdssecurity/Whitepapers/blob/master/GDS%20Labs%20-%20Identifying%20Rogue%20Access%20Point%20Attacks%20Using%20Probe%20Response%20Patterns%20and%20Signal%20Strength.pdf) |
 
 ## Conference Talks
