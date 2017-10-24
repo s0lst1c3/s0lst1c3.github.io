@@ -27,6 +27,8 @@ Beyond Wardriving: Tracking Human Beings Using RF Technology
 
 Presented at: [BSides SLC 2017]()
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kyJe0prz0lk" frameborder="0" allowfullscreen></iframe>
+
 ---
 
 Slaying Rogue Access Points With Python and Cheap Hardware
