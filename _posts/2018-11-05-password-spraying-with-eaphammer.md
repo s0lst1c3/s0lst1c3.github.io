@@ -13,6 +13,6 @@ Suppose you are conducting a wireless security assessment and somehow stumble ac
 
 	./eaphammer --interface-pool wlan0 wlan1 wlan2 wlan3 --essid example-corp --password letmein --user-list users.txt
 
-![eap-spray](http://solstice.sh/images/eap-spray/split_panes_full.png)
+![eap-spray](http://solstice.sh/images/eap-spray/eap-spray.png)
 
 The latest version of eaphammer can be found at: [https://github.com/s0lst1c3/eaphammer] (https://github.com/s0lst1c3/eaphammer)
