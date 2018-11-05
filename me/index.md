@@ -5,9 +5,14 @@ layout: about
 
 ![aboutprofilepicture](http://solstice.sh/images/solstice-sh-profile.jpg)
 
-Gabriel Ryan - Security Consultant @ [Gotham Digital Science](https://www.gdssecurity.com)
+Gabriel Ryan - Co-Founder / Senior Security Assessment Manager @ [Digital Silence](https://www.digitalsilence.com)
+Formerly Gotham Digital Science, OGSystems.
 
 ## Work Blogs
+|  Digital Silence |
+| [Whitepaper - Bypassing Port-Security In 2018: Defeating MACSEC and 802.1x-2010](https://digitalsilence.com/bypassing-port-security-in-2018-defeating-macsec-and-802-1x-2010/) |
+| [5GHZ Electronic Warfare Part 1: Attacking 802.11N Networks](https://digitalsilence.com/5ghz-electronic-warfare-part-1-attacking-802-11n-networks/) |
+| [Powershell Empire - Evading Nessus Plugin 99592](https://digitalsilence.com/powershell-empire-evading-nessus-plugin-99592/) |
 
 |  Gotham Digital Science |
 | [Whitepaper: The Black Art Of Wireless Post-Exploitation - Bypassing Port-Based Access Controls Using Indirect Wireless Pivots](https://blog.gdssecurity.com/labs/2017/8/31/whitepaper-the-black-art-of-wireless-post-exploitation-bypas.html) |
@@ -19,6 +24,8 @@ Gabriel Ryan - Security Consultant @ [Gotham Digital Science](https://www.gdssec
 | [Security Speaks: Breaking Through At BSides](https://www.tripwire.com/state-of-security/security-awareness/events/security-speaks-breaking-through-at-bsides/) |
 
 ## Whitepapers
+|  Digital Silence |
+| [Bypassing Port-Security In 2018: Defeating MACSEC and 802.1x-2010](https://digitalsilence.com/bypassing-port-security-in-2018-defeating-macsec-and-802-1x-2010/) |
 
 | Gotham Digital Science |
 | [The Black Art Of Wireless Post-Exploitation - Bypassing Port-Based Access Controls Using Indirect Wireless Pivots](https://blog.gdssecurity.com/labs/2017/8/31/whitepaper-the-black-art-of-wireless-post-exploitation-bypas.html) |
