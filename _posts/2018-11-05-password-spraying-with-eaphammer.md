@@ -15,4 +15,4 @@ Suppose you are conducting a wireless security assessment and somehow stumble ac
 
 ![eap-spray](http://solstice.sh/images/eap-spray/eap-spray.png)
 
-The latest version of eaphammer can be found at: [https://github.com/s0lst1c3/eaphammer] (https://github.com/s0lst1c3/eaphammer)
+The latest version of eaphammer can be found at [https://github.com/s0lst1c3/eaphammer] (https://github.com/s0lst1c3/eaphammer).
