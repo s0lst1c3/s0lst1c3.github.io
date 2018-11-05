@@ -6,7 +6,7 @@ layout: page
 Bypassing Port Security in 2018: Defeating MACSEC and 802.1x-2010
 -----------------------------------------------------------------
 
-Presented at: [Thotcon 2018](), [HackWest 2018](), [BSidesKC 2018]()
+Presented at: [DEF CON 26](), [DerbyCon 2018](), [44con](), [BSides DC]()
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lX4ZnQ-pfWQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
