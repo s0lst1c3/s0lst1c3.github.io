@@ -26,7 +26,8 @@ Formerly Gotham Digital Science, OGSystems.
 | [Security Speaks: Breaking Through At BSides](https://www.tripwire.com/state-of-security/security-awareness/events/security-speaks-breaking-through-at-bsides/) |
 
 ## Whitepapers
-|  Digital Silence |
+
+| Digital Silence |
 | [Bypassing Port-Security In 2018: Defeating MACSEC and 802.1x-2010](https://digitalsilence.com/bypassing-port-security-in-2018-defeating-macsec-and-802-1x-2010/) |
 
 | Gotham Digital Science |
