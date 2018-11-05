@@ -1,6 +1,6 @@
 ---
 layout: post
-title: eaphammer Update: support for Password Spraying as of v0.4.0-beta
+title: eaphammer update - password spraying as of 0.4.0
 categories:
 - wireless
 - eaphammer
