@@ -25,8 +25,7 @@ The problem is that many of these configuration options are insecure, particular
 Without SSLv3 support, tools such as EAPHammer have cannot communicate wirelessly with legacy systems such as Windows 7. These legacy systems will outright refuse to connect to wireless access points that do not support SSLv3, as shown in the following screenshot:
 
 ![Figure 1](http://s0lst1c3.github.io/images/eaphammer-sslv23/sslv3-windows7-old.png)
-
-{% include image.html url="http://s0lst1c3.github.io/images/eaphammer-sslv23/sslv3-windows7-old.png" description="Figure 1" %}
+*Figure 1*
 
 If you're going to be in the business of running wireless pentests against enterprise organizations, you're going to need to need tools that can execute rogue access point attacks against Windows 7 hosts. The operating system is still supported by Microsoft until 14 January 2020, and its presence within enterprise environments is unlikely to disappear anytime soon after that. Much of the BYOD wireless attack surface still relies on SSLv3 as well.
 
@@ -45,6 +44,7 @@ However, even these steps that can be taken by an end-user don't completely solv
 Looking at the source code for hostapd 2.6, we can use grep to perform a recursive and case-insensitive search for the words 'sslv2' and 'sslv3'.
 
 ![Figure 2](http://s0lst1c3.github.io/images/eaphammer-sslv23/grep-for-sslv3-and-sslv2.png)
+*Figure 2*
 
 This reveals the following lines of code within hostapd/src/crypto/tls\_openssl.c:
 
@@ -58,10 +58,12 @@ This reveals the following lines of code within hostapd/src/crypto/tls\_openssl.
 From the file header located at the top of hostapd/src/crypto/cryto.h we know that hostapd/src/crypto/tls\_openssl.c contains wrapper code for functions defined within within libssl:
 
 ![Figure 3](http://s0lst1c3.github.io/images/eaphammer-sslv23/crypto-dot-h-header.png)
+*Figure 3*
 
 The SSL\_CTX\_set\_options() function shown in *Figure 2* has been included from libssl, and is used to configure libssl at runtime using bitmasks (see: [ https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html](https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html)). The global variables containing the bitmasks are defined by preprocessor directives in openssl/include/openssl/ssl.h:
 
 ![Figure 4](http://s0lst1c3.github.io/images/eaphammer-sslv23/libssl-no-sslv-def.png)
+*Figure 4*
 
  In the snippets of code shown in *Figure 2*, the SSL\_CTX\_set\_options() function is being used to forbid libssl from supporting connections made using SSLv2/3.
 
