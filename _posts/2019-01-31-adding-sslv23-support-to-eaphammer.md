@@ -1,3 +1,11 @@
+---
+layout: post
+title: EAPHammer Release 0.5.0v - Legacy Crypto Support
+categories:
+- wireless
+- eaphammer
+---
+
 A couple of days ago, EAPHammer version 0.5.0 was released (see: [https://github.com/s0lst1c3/eaphammer/releases/tag/v0.5.0-beta](https://github.com/s0lst1c3/eaphammer/releases/tag/v0.5.0-beta)). This update introduces a very subtle, yet very important capability to the project: SSLv2/3 support.
 
 Why is this update so important? To answer this question, let's first go over some background info at a very high level.
