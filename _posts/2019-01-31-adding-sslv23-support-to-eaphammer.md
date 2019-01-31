@@ -18,7 +18,7 @@ OpenSSL itself is a highly configurable library (except when it isn't, as we'll 
 
 The problem is that many of these configuration options are insecure, particularly the ones that allow communication using older cipher suites and protocol versions. SSL versions 2 and 3 are particularly problematic, along with TLS version 1.0. In particular, the problems that affect SSL versions 2 and 3 are serious enough that support for these protocols has been explicitly stripped by default from the latest builds of OpenSSL. As a result, modern operating systems such as Windows 10 and the latest versions of Kali will refuse to communicate with legacy systems such as Windows 7 that still rely on SSLv2/3.
 
-## How does this relate to EAPHammer?
+# How does this relate to EAPHammer?
 
 Without SSLv3 support, tools such as EAPHammer have cannot communicate wirelessly with legacy systems such as Windows 7. These legacy systems will outright refuse to connect to wireless access points that do not support SSLv3, as shown in the following screenshot:
 
