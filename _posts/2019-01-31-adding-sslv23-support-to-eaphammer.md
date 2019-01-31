@@ -62,12 +62,12 @@ From the file header located at the top of hostapd/src/crypto/cryto.h we know th
 ![Figure 4](http://s0lst1c3.github.io/images/eaphammer-sslv23/crypto-dot-h-header.png)
 *Figure 4*
 
-The SSL\_CTX\_set\_options() function shown in *Figure 2* has been included from libssl, and is used to configure libssl at runtime using bitmasks (see: [ https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html](https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html)). The global variables containing the bitmasks are defined by preprocessor directives in openssl/include/openssl/ssl.h:
+The SSL\_CTX\_set\_options() function shown in *Figure 3* has been included from libssl, and is used to configure libssl at runtime using bitmasks (see: [ https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html](https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html)). The global variables containing the bitmasks are defined by preprocessor directives in openssl/include/openssl/ssl.h:
 
 ![Figure 5](http://s0lst1c3.github.io/images/eaphammer-sslv23/libssl-no-sslv-def.png)
 *Figure 5*
 
- In the snippets of code shown in *Figure 2*, the SSL\_CTX\_set\_options() function is being used to forbid libssl from supporting connections made using SSLv2/3.
+ In the snippet of code shown in *Figure 3*, the SSL\_CTX\_set\_options() function is being used to forbid libssl from supporting connections made using SSLv2/3.
 
 In conclusion: merely using a build of OpenSSL that has been compiled with SSLv2/3 support isn't enough, because modern versions of hostapd explicitly forbid the use of these protocol versions at runtime.
 
@@ -75,4 +75,4 @@ In conclusion: merely using a build of OpenSSL that has been compiled with SSLv2
 
 EAPHammer now relies on its own local build of OpenSSL that exists independently of the build used by the operating system. This local OpenSSL build is linked to EAPHammer during the initial setup process, and is compiled with support for SSLv2/3 along with an array of weaker cipher suites that may be needed to communicate with legacy clients.This design decision does mean that EAPHammer's initial setup process takes significantly longer, but unless you have to perform "initial" setups regularly for some reason, the ends justify the means.
 
-Additionally, EAPHammer's version of hostapd has been patched to allow SSLv2/3 support. Doing so was simply a matter of commenting out the offending lines of code shown in *Figure 2ch* previously. These changes to hostapd will also be submitted to related projects such as Mana and Hostapd-WPE.
+Additionally, EAPHammer's version of hostapd has been patched to allow SSLv2/3 support. Doing so was simply a matter of commenting out the offending lines of code shown in *Figure 3* previously. These changes to hostapd will also be submitted to related projects such as Mana and Hostapd-WPE.
