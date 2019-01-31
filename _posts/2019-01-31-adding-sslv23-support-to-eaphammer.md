@@ -62,7 +62,7 @@ From the file header located at the top of hostapd/src/crypto/cryto.h, we know t
 ![Figure 4](http://s0lst1c3.github.io/images/eaphammer-sslv23/crypto-dot-h-header.png)
 *Figure 4*
 
-The SSL\_CTX\_set\_options() function shown in *Figure 3* has been included from libssl, and is used to configure libssl at runtime using bitmasks (see: [ https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html](https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html)). The global variables containing the bitmasks are defined by preprocessor directives in openssl/include/openssl/ssl.h:
+The SSL\_CTX\_set\_options() function shown in *Figure 3* has been included from libssl, and is used to configure libssl at runtime using bitmasks (see: [ https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html](https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html)). The global variables containing the bitmasks are defined by preprocessor directives within openssl/include/openssl/ssl.h:
 
 ![Figure 5](http://s0lst1c3.github.io/images/eaphammer-sslv23/libssl-no-sslv-def.png)
 *Figure 5*
