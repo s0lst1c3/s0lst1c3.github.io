@@ -8,7 +8,7 @@ categories:
 
 A couple of days ago, EAPHammer version 0.5.0 was released. This update introduces a very subtle, yet very important capability to the project: SSLv2/3 support.
 
-[https://github.com/s0lst1c3/eaphammer/releases/tag/v0.5.0-beta](https://github.com/s0lst1c3/eaphammer/releases/tag/v0.5.0-beta)). 
+- [https://github.com/s0lst1c3/eaphammer/releases/tag/v0.5.0-beta](https://github.com/s0lst1c3/eaphammer/releases/tag/v0.5.0-beta) 
 
 # Why is this update so important?
 
