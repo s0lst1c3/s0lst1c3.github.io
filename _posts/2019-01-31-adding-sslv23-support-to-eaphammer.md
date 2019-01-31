@@ -54,16 +54,17 @@ This reveals the following lines of code within hostapd/src/crypto/tls\_openssl.
 	./src/crypto/tls_openssl.c:954:		ssl = SSL_CTX_new(SSLv23_method());
 	./src/crypto/tls_openssl.c:972:	SSL_CTX_set_options(ssl, SSL_OP_NO_SSLv2);
 	./src/crypto/tls_openssl.c:1352:	options = SSL_OP_NO_SSLv2 | SSL_OP_NO_SSLv3 |
+*Figure 3*
 
 From the file header located at the top of hostapd/src/crypto/cryto.h we know that hostapd/src/crypto/tls\_openssl.c contains wrapper code for functions defined within within libssl:
 
-![Figure 3](http://s0lst1c3.github.io/images/eaphammer-sslv23/crypto-dot-h-header.png)
-*Figure 3*
+![Figure 4](http://s0lst1c3.github.io/images/eaphammer-sslv23/crypto-dot-h-header.png)
+*Figure 4*
 
 The SSL\_CTX\_set\_options() function shown in *Figure 2* has been included from libssl, and is used to configure libssl at runtime using bitmasks (see: [ https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html](https://www.openssl.org/docs/man1.0.2/ssl/SSL_CTX_set_options.html)). The global variables containing the bitmasks are defined by preprocessor directives in openssl/include/openssl/ssl.h:
 
-![Figure 4](http://s0lst1c3.github.io/images/eaphammer-sslv23/libssl-no-sslv-def.png)
-*Figure 4*
+![Figure 5](http://s0lst1c3.github.io/images/eaphammer-sslv23/libssl-no-sslv-def.png)
+*Figure 5*
 
  In the snippets of code shown in *Figure 2*, the SSL\_CTX\_set\_options() function is being used to forbid libssl from supporting connections made using SSLv2/3.
 
