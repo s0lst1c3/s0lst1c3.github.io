@@ -27,7 +27,7 @@ Without SSLv3 support, tools such as EAPHammer have cannot communicate wirelessl
 If you're going to be in the business of running wireless pentests against enterprise organizations, you're going to need to need tools that can execute rogue access point attacks against Windows 7 hosts. The operating system is still supported by Microsoft until 14 January 2020, and its presence within enterprise environments is unlikely to disappear anytime soon after that. Much of the BYOD wireless attack surface still relies on SSLv3 as well.
 
 
-**Why isn't this an end-user problem?**
+# Why isn't this an end-user problem?
 
 As an end-user, adding SSLv2/3 support to your offensive wireless toolkit is easier said than done. Your options are to:
 
@@ -36,7 +36,7 @@ As an end-user, adding SSLv2/3 support to your offensive wireless toolkit is eas
 
 However, even these steps that can be taken by an end-user don't completely solve the problem. The latest version of hostapd (from which EAPHammer/Mana/WPE/Sniffair/etc are all based) actually includes code that explicitly disables SSLv2/3 at runtime.
 
-**Why should I believe you?**
+# Why should I believe you?
 
 Looking at the source code for hostapd 2.6, we can use grep to perform a recursive and case-insensitive search for the words 'sslv2' and 'sslv3'.
 
@@ -63,7 +63,7 @@ The SSL\_CTX\_set\_options() function shown in *Figure 2* has been included from
 
 In conclusion: merely using a build of OpenSSL that has been compiled with SSLv2/3 support isn't enough, because modern versions of hostapd explicitly forbid the use of these protocol versions at runtime.
 
-**How has this issue been fixed within EAPHammer?**
+# How has this issue been fixed within EAPHammer?
 
 EAPHammer now relies on its own local build of OpenSSL that exists independently of the build used by the operating system. This local OpenSSL build is linked to EAPHammer during the initial setup process, and is compiled with support for SSLv2/3 along with an array of weaker cipher suites that may be needed to communicate with legacy clients.This design decision does mean that EAPHammer's initial setup process takes significantly longer, but unless you have to perform "initial" setups regularly for some reason, the ends justify the means.
 
