@@ -10,7 +10,9 @@ A couple of days ago, EAPHammer version 0.5.0 was released. This update introduc
 
 [https://github.com/s0lst1c3/eaphammer/releases/tag/v0.5.0-beta](https://github.com/s0lst1c3/eaphammer/releases/tag/v0.5.0-beta)). 
 
-Why is this update so important? To answer this question, let's first go over some background info at a very high level.
+# Why is this update so important?
+
+To answer this question, let's first go over some background info at a very high level.
 
 EAPHammer is a tool that creates rogue access points. In order to use it to assess the security of WPA/2-EAP networks, it needs to be able to create rogue access points that support EAP methods that rely on TLS and SSL, such as EAP-PEAP. To provide this support, EAPHammer relies on a library called OpenSSL.
 
@@ -23,6 +25,8 @@ The problem is that many of these configuration options are insecure, particular
 Without SSLv3 support, tools such as EAPHammer have cannot communicate wirelessly with legacy systems such as Windows 7. These legacy systems will outright refuse to connect to wireless access points that do not support SSLv3, as shown in the following screenshot:
 
 ![Figure 1](http://s0lst1c3.github.io/images/eaphammer-sslv23/sslv3-windows7-old.png)
+
+{% include image.html url="/images/eaphammer-sslv23/sslv3-windows7-old.png" description="Figure 1" %}
 
 If you're going to be in the business of running wireless pentests against enterprise organizations, you're going to need to need tools that can execute rogue access point attacks against Windows 7 hosts. The operating system is still supported by Microsoft until 14 January 2020, and its presence within enterprise environments is unlikely to disappear anytime soon after that. Much of the BYOD wireless attack surface still relies on SSLv3 as well.
 
