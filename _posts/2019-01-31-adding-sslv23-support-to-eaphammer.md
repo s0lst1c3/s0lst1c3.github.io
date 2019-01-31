@@ -57,7 +57,7 @@ This reveals the following lines of code within hostapd/src/crypto/tls\_openssl.
 
 *Figure 3*
 
-From the file header located at the top of hostapd/src/crypto/cryto.h we know that hostapd/src/crypto/tls\_openssl.c contains wrapper code for functions defined within within libssl:
+From the file header located at the top of hostapd/src/crypto/cryto.h, we know that hostapd/src/crypto/tls\_openssl.c contains wrapper code for functions defined within within libssl:
 
 ![Figure 4](http://s0lst1c3.github.io/images/eaphammer-sslv23/crypto-dot-h-header.png)
 *Figure 4*
