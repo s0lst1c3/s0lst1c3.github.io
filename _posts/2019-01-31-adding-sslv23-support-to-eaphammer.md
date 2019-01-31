@@ -73,6 +73,6 @@ In conclusion: merely using a build of OpenSSL that has been compiled with SSLv2
 
 # How has this issue been fixed within EAPHammer?
 
-EAPHammer now relies on its own local build of OpenSSL that exists independently of the build used by the operating system. This local OpenSSL build is linked to EAPHammer during the initial setup process, and is compiled with support for SSLv2/3 along with an array of weaker cipher suites that may be needed to communicate with legacy clients.This design decision does mean that EAPHammer's initial setup process takes significantly longer, but unless you have to perform "initial" setups regularly for some reason, the ends justify the means.
+EAPHammer now relies on its own local build of OpenSSL that exists independently of the build used by the operating system. This local OpenSSL build is linked to EAPHammer during the initial setup process, and is compiled with support for SSLv2/3 along with an array of weaker cipher suites that may be needed to communicate with legacy clients. This design decision does mean that EAPHammer's initial setup process takes significantly longer, but unless you have to perform "initial" setups regularly for some reason, the ends justify the means.
 
 Additionally, EAPHammer's version of hostapd has been patched to allow SSLv2/3 support. Doing so was simply a matter of commenting out the offending lines of code shown in *Figure 3* previously. These changes to hostapd will also be submitted to related projects such as Mana and Hostapd-WPE.
