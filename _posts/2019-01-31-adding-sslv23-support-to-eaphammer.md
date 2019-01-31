@@ -54,6 +54,7 @@ This reveals the following lines of code within hostapd/src/crypto/tls\_openssl.
 	./src/crypto/tls_openssl.c:954:		ssl = SSL_CTX_new(SSLv23_method());
 	./src/crypto/tls_openssl.c:972:	SSL_CTX_set_options(ssl, SSL_OP_NO_SSLv2);
 	./src/crypto/tls_openssl.c:1352:	options = SSL_OP_NO_SSLv2 | SSL_OP_NO_SSLv3 |
+
 *Figure 3*
 
 From the file header located at the top of hostapd/src/crypto/cryto.h we know that hostapd/src/crypto/tls\_openssl.c contains wrapper code for functions defined within within libssl:
