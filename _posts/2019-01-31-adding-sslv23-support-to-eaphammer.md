@@ -26,7 +26,7 @@ Without SSLv3 support, tools such as EAPHammer have cannot communicate wirelessl
 
 ![Figure 1](http://s0lst1c3.github.io/images/eaphammer-sslv23/sslv3-windows7-old.png)
 
-{% include image.html url="/images/eaphammer-sslv23/sslv3-windows7-old.png" description="Figure 1" %}
+{% include image.html url="http://s0lst1c3.github.io/images/eaphammer-sslv23/sslv3-windows7-old.png" description="Figure 1" %}
 
 If you're going to be in the business of running wireless pentests against enterprise organizations, you're going to need to need tools that can execute rogue access point attacks against Windows 7 hosts. The operating system is still supported by Microsoft until 14 January 2020, and its presence within enterprise environments is unlikely to disappear anytime soon after that. Much of the BYOD wireless attack surface still relies on SSLv3 as well.
 
