@@ -24,21 +24,21 @@ Cert Wizard was only capable of creating self-signed certificates with a very sp
 
 There are a lot of situations in which it makes sense to use a server certificate that was obtained elsewhere:
 
-* You’d like to use a believable certificate chain cloned directly from a target using a tool such as Apostille [\[1\]](https://sensepost.com/blog/2017/recreating-certificates-using-apostille/).
+* You’d like to use a believable certificate chain cloned directly from a target using a tool such as Apostille [\[1\]](http://solstice.sh/wireless/eaphammer/2019/04/18/eaphammer-v0-7-0-certificate-handling/#references).
 
 * You manage to use compromised certificates that you’ve managed to obtain from the target organization. 
 
-* You’d like to use a valid certificate signed by an external CA such as Let’s Encrypt. Some badly configured or designed clients actually accept these certificates as valid  [\[2\]](). More commonly, platforms such as OSX will present these certificates to users in such a way that makes them trustworthy, even in situations where it doesn’t make sense to do so (see *Figure 2*).
+* You’d like to use a valid certificate signed by an external CA such as Let’s Encrypt. Some badly configured or designed clients actually accept these certificates as valid  [\[2\]](http://solstice.sh/wireless/eaphammer/2019/04/18/eaphammer-v0-7-0-certificate-handling/#references). More commonly, platforms such as OSX will present these certificates to users in such a way that makes them trustworthy, even in situations where it doesn’t make sense to do so (see *Figure 2*).
 
 <img src="http://s0lst1c3.github.io/images/eaphammer-v0.7.0/eaphammer-v070-trusted-cert-osx.png" alt="drawing" width="600"/>
 
 *Figure 2*
 
 ### Lack of Control over Diffie-Hellman (DH) Parameters
-OpenSSL requires pre-computed DH Parameters to support cipher suites that support forward secrecy  [\[3\]]()
+OpenSSL requires pre-computed DH Parameters to support cipher suites that support forward secrecy  [\[3\]](http://solstice.sh/wireless/eaphammer/2019/04/18/eaphammer-v0-7-0-certificate-handling/#references)
 . Hostapd stores its DH Parameters in its DH file, which is generated or regenerated each time the bootstrap script is run. Since the original Cert Wizard was a wrapper for the bootstrap script, earlier versions of EAPHammer handled DH parameters in this way as well.
 
-There are a few problems with this approach. For one thing, the default configs used by the bootstrap script use a DH length of 1024 bits, which falls before the modern recommended length of 2048 bits. In most cases, this isn’t a big deal, but can lead to OpenSSL errors in some situations  [\[4\]](). Additionally, this approach doesn’t provide the user with a means of manually specifying the DH length, or the ability to regenerate the DH parameters should the situation call for it.
+There are a few problems with this approach. For one thing, the default configs used by the bootstrap script use a DH length of 1024 bits, which falls before the modern recommended length of 2048 bits. In most cases, this isn’t a big deal, but can lead to OpenSSL errors in some situations  [\[4\]](http://solstice.sh/wireless/eaphammer/2019/04/18/eaphammer-v0-7-0-certificate-handling/#references). Additionally, this approach doesn’t provide the user with a means of manually specifying the DH length, or the ability to regenerate the DH parameters should the situation call for it.
 
 # Version 0.7.0 Addresses These Issues
 First and most importantly, version 0.7.0 completely strips away any reliance on hostapd’s bootstrap scripts. Instead, certificates are created and managed natively by EAPHammer using Python’s OpenSSL and pem libraries. This made it possible to create a much more fleshed-out version of Cert Wizard with a number of new capabilities.
