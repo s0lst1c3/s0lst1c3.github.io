@@ -1,6 +1,6 @@
 ---
 layout: post
-title: eaphammer update - password spraying as of 0.4.0
+title: EAPHammer Version 0.4.0 - Password Spraying Attacks
 categories:
 - wireless
 - eaphammer
