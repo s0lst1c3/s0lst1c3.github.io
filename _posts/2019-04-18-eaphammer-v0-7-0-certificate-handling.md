@@ -24,7 +24,7 @@ EAPHammer's Cert Wizard offered multiple advantages that were somewhat unique wh
 
 ### One size fits all approach
 
-Cert Wizard was only capable of creating self-signed certificates with a very narrow set of attributes. Additionally, users were afforded no control over things like key length and the cryptographic algorithms used during the certificate creation process.
+Cert Wizard was only capable of creating self-signed certificates with a very narrow set of attributes. Additionally, users were afforded no control over things like key length. Choice of cryptographic algorithms was determined by a hardcoded variable buried deep within EAPHammer's (rather frightening) codebase.
 
 ### No support for certificates created outside of EAPHammer
 
