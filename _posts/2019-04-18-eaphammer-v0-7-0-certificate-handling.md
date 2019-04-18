@@ -74,9 +74,9 @@ Finally, EAPHammer now relies on a 2048 bit DH file by default. Additionally, us
 
 # References
 
-- [\[1\] https://sensepost.com/blog/2017/recreating-certificates-using-apostille/](https://sensepost.com/blog/2017/recreating-certificates-using-apostille/)\
-- [\[2\] https://arts.units.it/retrieve/handle/11368/2915044/203999/2018-CS-EvilTwinsSecurityDisaster.pdf](https://arts.units.it/retrieve/handle/11368/2915044/203999/2018-CS-EvilTwinsSecurityDisaster.pdf)\
-- [\[3\] https://wiki.openssl.org/index.php/Diffie-Hellman_parameters](https://wiki.openssl.org/index.php/Diffie-Hellman_parameters)\
-- [\[4\] https://github.com/s0lst1c3/eaphammer/issues/69](https://github.com/s0lst1c3/eaphammer/issues/69)\
-- [\[5\] https://pypi.org/project/pyOpenSSL/](https://pypi.org/project/pyOpenSSL/)\
-- [\[6\] https://pypi.org/project/pem/](https://pypi.org/project/pem/)\
+- [\[1\] https://sensepost.com/blog/2017/recreating-certificates-using-apostille/](https://sensepost.com/blog/2017/recreating-certificates-using-apostille/)
+- [\[2\] https://arts.units.it/retrieve/handle/11368/2915044/203999/2018-CS-EvilTwinsSecurityDisaster.pdf](https://arts.units.it/retrieve/handle/11368/2915044/203999/2018-CS-EvilTwinsSecurityDisaster.pdf)
+- [\[3\] https://wiki.openssl.org/index.php/Diffie-Hellman_parameters](https://wiki.openssl.org/index.php/Diffie-Hellman_parameters)
+- [\[4\] https://github.com/s0lst1c3/eaphammer/issues/69](https://github.com/s0lst1c3/eaphammer/issues/69)
+- [\[5\] https://pypi.org/project/pyOpenSSL/](https://pypi.org/project/pyOpenSSL/)
+- [\[6\] https://pypi.org/project/pem/](https://pypi.org/project/pem/)
