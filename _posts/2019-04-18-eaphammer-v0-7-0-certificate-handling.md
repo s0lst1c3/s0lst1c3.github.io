@@ -20,7 +20,7 @@ Cert Wizard consisted of a series of prompts that asked the user to input attrib
 
 *Figure 1*
 
-EAPHammer's Cert Wizard offered multiple advantages that were somewhat unique at the time (although it was only a matter of time until someone else built a toll that had these features). Not only did it make it possible to stand up a rogue AP within seconds, rather than minutes, but it did so in a way that worked against the vast majority of vulnerable devices (although EAPHamer inherited this second advantage from hostapd-wpe, which means credit goes to Brad Antoniewicz). However, the original version of Cert Wizard also suffered from several glaring limitations:
+EAPHammer's Cert Wizard offered multiple advantages that were somewhat unique at the time (although it was only a matter of time until someone else built a tool with similar features). Not only did it make it possible to stand up a rogue AP within seconds, rather than minutes, but it did so in a way that worked against the vast majority of vulnerable devices (although EAPHamer inherited this second advantage from hostapd-wpe, which means credit goes to Brad Antoniewicz). However, the original version of Cert Wizard also suffered from several glaring limitations:
 
 ### One size fits all approach
 
