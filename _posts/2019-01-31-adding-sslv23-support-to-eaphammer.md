@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EAPHammer Release 0.5.0v - Legacy Crypto Support
+title: EAPHammer Version 0.5.0 - Legacy Crypto Support
 categories:
 - wireless
 - eaphammer
