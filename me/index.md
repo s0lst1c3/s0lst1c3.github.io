@@ -3,11 +3,30 @@ title: About
 layout: about
 ---
 
-![aboutprofilepicture](http://solstice.sh/images/solstice-sh-profile.jpg)
 
-Gabriel Ryan - Co-Founder / Senior Security Assessment Manager @ [Digital Silence](https://www.digitalsilence.com)
+Security R&D and red teamer. Former Digital Silence, GDS Security. Author of:
 
-Formerly Gotham Digital Science, OGSystems.
+- [EAPHammer](https://github.com/s0lst1c3/eaphammer) - EAPHammer is a toolkit for performing targeted evil twin attacks against WPA2-Enterprise networks. It is designed to be used in full scope wireless assessments and red team engagements.
+- [SilentBridge](https://github.com/s0lst1c3/silentbridge) - SilentBridge is a toolkit for quickly bypassing 802.1x port security first presented at DEF CON 26. It provides the first documented means of bypassing 802.1x-2010 via its authentication process, as well as improvements to existing techniques for bypassing 802.1x-2004.
+
+I've presented at DEF CON, DerbyCon, Hackfest, 44con, SecTor, and several Security BSides conferences on topics ranging from wireless and infrastructure security to access control protocols and red team tradecraft. I have also taught workshops on advanced wireless tactics for clients and at international industry conferences. My other technical interests include systems internals, low-level programming, payload development, and infrastructure automation.
+
+Twitter: [@s0lst1c3](https://twitter.com/s0lst1c3)
+
+Github: [s0lst1c3](https://github.com/s0lst1c3)
+
+E-Mail: gabriel [at] this domain
+
+For my complete portfolio of projects, publications, and speaking engagements, check out the links below.
+
+## Whitepapers
+
+| Digital Silence |
+| [Bypassing Port-Security In 2018: Defeating MACSEC and 802.1x-2010](https://digitalsilence.com/bypassing-port-security-in-2018-defeating-macsec-and-802-1x-2010/) |
+
+| Gotham Digital Science |
+| [The Black Art Of Wireless Post-Exploitation - Bypassing Port-Based Access Controls Using Indirect Wireless Pivots](https://blog.gdssecurity.com/labs/2017/8/31/whitepaper-the-black-art-of-wireless-post-exploitation-bypas.html) |
+| [Identifying Rogue Access Point Attacks Using Probe Response Patterns And Signal Strength](https://github.com/gdssecurity/Whitepapers/blob/master/GDS%20Labs%20-%20Identifying%20Rogue%20Access%20Point%20Attacks%20Using%20Probe%20Response%20Patterns%20and%20Signal%20Strength.pdf) |
 
 ## Work Blogs
 
@@ -24,15 +43,6 @@ Formerly Gotham Digital Science, OGSystems.
 | Tripwire: State of Security (Guest Contributer)
 | [People, Processes and Technology: The Triad of Your Organization’s Cyber Security](https://www.tripwire.com/state-of-security/security-data-protection/cyber-security/people-processes-and-technology-the-triad-of-your-organizations-cyber-security/) |
 | [Security Speaks: Breaking Through At BSides](https://www.tripwire.com/state-of-security/security-awareness/events/security-speaks-breaking-through-at-bsides/) |
-
-## Whitepapers
-
-| Digital Silence |
-| [Bypassing Port-Security In 2018: Defeating MACSEC and 802.1x-2010](https://digitalsilence.com/bypassing-port-security-in-2018-defeating-macsec-and-802-1x-2010/) |
-
-| Gotham Digital Science |
-| [The Black Art Of Wireless Post-Exploitation - Bypassing Port-Based Access Controls Using Indirect Wireless Pivots](https://blog.gdssecurity.com/labs/2017/8/31/whitepaper-the-black-art-of-wireless-post-exploitation-bypas.html) |
-| [Identifying Rogue Access Point Attacks Using Probe Response Patterns And Signal Strength](https://github.com/gdssecurity/Whitepapers/blob/master/GDS%20Labs%20-%20Identifying%20Rogue%20Access%20Point%20Attacks%20Using%20Probe%20Response%20Patterns%20and%20Signal%20Strength.pdf) |
 
 ## Conference Talks
 
