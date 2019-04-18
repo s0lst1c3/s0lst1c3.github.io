@@ -6,19 +6,21 @@ categories:
 - eaphammer
 ---
 
-The latest version of EAPHammer greatly expands its ability to generate, import, and manage private keys and x509 certificates. This post describes these new features in detail, and provides the context and background information to understand why these new features were needed.
+The latest version of EAPHammer greatly expands its ability to generate, import, and manage private keys and x509 certificates. This post describes these new features in detail and provides the necessary background information to understand why these new features were needed.
 
 - [https://github.com/s0lst1c3/eaphammer/releases/tag/v0.7.0-beta](https://github.com/s0lst1c3/eaphammer/releases/tag/v0.7.0-beta)
 
 # Background
 
-EAPHammer was originally created as a wrapper to hostapd-wpe, which uses vanilla hostapd’s bootstrap script to create self-signed server certificates. The bootstrap script, in turn, relies on a series of configuration files that must be edited by hand. This process used to be pretty painful to deal with, especially during time-boxed situations. Early releases of EAPHammer addressed this situation by providing a feature named Cert Wizard that automated the bootstrap process. Cert Wizard consisted of a series of prompts that asked the user to input a series of attributes that make up the certificates Common Name (CN) and Subject Alternate Name (SAN) (see figure __figure__).
+EAPHammer was initially created as a wrapper to hostapd-wpe, which uses vanilla hostapd’s bootstrap script to create self-signed server certificates. The bootstrap script, in turn, relies on a series of configuration files that must be edited by hand. Managing these configuration files can be painful to deal with when operating under the kinds of time constraints that are typical in security consulting. The earliest releases of EAPHammer addressed these usability issues by providing a feature known as Cert Wizard, which acted as a streamlined interface to hostapd's bootstrap script.
+
+Cert Wizard consisted of a series of prompts that asked the user to input attributes such as organization, organizational unit, and company email address. These attributes were then written to bootstrap's configuration files as the certificate's Common Name (CN) and Subject Alternative Name (SAN). Cert Wizard would then run the bootstrap script to generate a self-signed server certificate. This process is shown in Figure 1.
 
 <img src="http://s0lst1c3.github.io/images/eaphammer-v0.7.0/cert-wizard-blog-old-cw.gif" alt="drawing" width="600"/>
 
 *Figure 1*
 
-The main advantages offered by Cert Wizard were that it was fast and easy to use, and the that the generated certificates could be used in attacks against the vast majority of vulnerable networks. However, the original version of Cert Wizard also had several limitations:
+EAPHammer's Cert Wizard offered multiple advantages that were somewhat unique at the time (although it was only a matter of time until someone else built a toll that had these features). Not only did it make it possible to stand up a rogue AP within seconds, rather than minutes, but it did so in a way that worked against the vast majority of vulnerable devices (although EAPHamer inherited this second advantage from hostapd-wpe, which means credit goes to Brad Antoniewicz). However, the original version of Cert Wizard also suffered from several glaring limitations:
 
 ### One size fits all approach
 
