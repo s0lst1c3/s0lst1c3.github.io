@@ -116,6 +116,6 @@ As your practice this attack, you may notice that it is ineffective against the 
 
 ---
 
-### Next chapter: *[V. Firewall And NAC Evasion Using Indirect Wireless Pivots](http://solstice.sh/workshops/advanced-wireless-attacks/v-firewall-and-nac-evasion-using-indirect-wireless-pivots/)*
+### Next chapter: *[VI. Firewall And NAC Evasion Using Indirect Wireless Pivots](http://solstice.sh/workshops/advanced-wireless-attacks/vi-firewall-and-nac-evasion-using-indirect-wireless-pivots/)*
 
 ---

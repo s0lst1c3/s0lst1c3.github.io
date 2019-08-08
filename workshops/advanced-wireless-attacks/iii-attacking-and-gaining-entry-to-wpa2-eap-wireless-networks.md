@@ -17,7 +17,7 @@ layout: workshop
 
 # Chapter Overview
 
-In this section we'll go over some additional advanced attacks that can be leveraged against networks that use WPA/2-EAP. The first of these attacks is the GTC Downgrade attack, which can be used to trick client devices into surrendering plaintext credentials. The second of these attacks is the EAP Relay attack, which can be used to to relay inner MSHCHAPv2 to authenticate with PEAP networks without cracking passwords (think NTLM relay attacks for WiFi networks).
+In this section we'll go over some additional attacks against EAP that can be used to coerce wireless clients into using insecure EAP methods. We'll first discuss how the EAP Negotiation process works and how it is implemented by hostapd. We'll then discuss both generic and GTC downgrade attacks against EAP.
 
 # Wireless Theory: EAP Negotiation and the EAP User File
 
@@ -34,7 +34,9 @@ When a user attempts to authenticate with hostapd using EAP, hostapd looks up th
 
 As shown in FIGURE X below, which contains a line from a default hostapd EAP User file, the list of supported EAP methods is ordered from strongest to weakest.  This is done to ensure that client devices use the strongest EAP method available.
 
-```snippet here```
+```
+"t"	TTLS-PAP,TTLS-CHAP,TTLS-MSCHAP,MSCHAPV2,MD5,GTC,TTLS,TTLS-MSCHAPV2	"t"	[2]
+```
 
 # Wireless Theory: EAP Downgrade Attacks
 
@@ -53,15 +55,20 @@ For the purposes of this writeup, we're going to seperate GTC Downgrade attacks 
 
 In a Suggested GTC Downgrade attack, we reverse the order of the target user's allowed EAP methods in hostapd's EAP user file, making sure that GTC is suggested first. EAPHammer is configured to perform this style of attack by default, as it allows some flexibility to target clients that do not support GTC.
 
-```snippet here```
+```
+"t"	GTC,TTLS-PAP,MD5,TTLS-CHAP,TTLS-MSCHAP,MSCHAPV2,TTLS-MSCHAPV2,TTLS	"t"	[2]
+```
 
 In a Forced GTC Downgrade attack, we explicitly instruct client devices to authenticate using EAP-GTC as shown in the following EAP User entry:
 
 
-```snippet here```
+```
+* PEAP [ver=1]
+"t" GTC "t" [2]
+```
 
 ---
 
-### Next chapter: *[III. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)*
+### Next chapter: *[IV. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iv-wireless-man-in-the-middle-attacks/)*
 
 ---

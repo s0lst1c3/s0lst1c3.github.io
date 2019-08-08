@@ -222,6 +222,6 @@ Our completed bash script can be found in your Kali VM within the ~/awae/lab4 di
 
 ---
 
-### Next chapter: *[IV. SMB Relays and LLMNR/NBT-NS Poisoning](http://solstice.sh/workshops/advanced-wireless-attacks/iv-smb-relays-and-llmnr-nbt-ns-poisoning/)*
+### Next chapter: *[V. SMB Relays and LLMNR/NBT-NS Poisoning](http://solstice.sh/workshops/advanced-wireless-attacks/v-smb-relays-and-llmnr-nbt-ns-poisoning/)*
 
 ---

@@ -119,6 +119,6 @@ For this lab exercise, you will practice stealing RADIUS credentials by performi
 
 ---
 
-### Next chapter: *[III. Wireless Man-In-The-Middle Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-wireless-man-in-the-middle-attacks/)*
+### Next chapter: *[III. EAP Downgrade Attacks](http://solstice.sh/workshops/advanced-wireless-attacks/iii-eap-downgrade-attacks/)*
 
 ---
