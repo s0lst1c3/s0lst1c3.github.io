@@ -35,6 +35,25 @@ Course Highlights include:
 
 The material covered in this workshop is supplemented by hands-on lab exercises within the course's virtual lab environment. Instructions on setting up the virtual lab environment can be found in the Lab Setup Guide, which is included below. Feel free to reach out to the instructor at gryan[at]specterops[dot]io for guidance.
 
+
+Prerequisites
+-------------
+
+A previous wireless security background is helpful but not required. You'll also need a laptop with at least 8 gb of RAM that is capable of running VirtualBox or VMWare. Additional hardware requirements can be in the Lab Setup Guide included below.
+
+Course Materials
+----------------
+
+All course materials, including the lab setup guide, can be found at the following URL:
+
+[Course Materials](https://drive.google.com/open?id=0BwFgM9oAhmd_c2JJaG1iUmhkZTg)
+
+---
+
+### First chapter: *[I. Target Identification Within A Red Team Environment](http://solstice.sh/workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)*
+
+---
+
 Changelog:
 ----------
 
@@ -58,21 +77,3 @@ Changelog:
 
 - Updates: Initial workshop  
 - Presented at: _DEF CON 25, BSides Las Vegas, BSides Chicago, BSides DC, Hackfest_
-
-Prerequisites
--------------
-
-A previous wireless security background is helpful but not required. You'll also need a laptop with at least 8 gb of RAM that is capable of running VirtualBox or VMWare. Additional hardware requirements can be in the Lab Setup Guide included below.
-
-Course Materials
-----------------
-
-All course materials, including the lab setup guide, can be found at the following URL:
-
-[Course Materials](https://drive.google.com/open?id=0BwFgM9oAhmd_c2JJaG1iUmhkZTg)
-
----
-
-### First chapter: *[I. Target Identification Within A Red Team Environment](http://solstice.sh/workshops/advanced-wireless-attacks/i-target-identification-within-a-red-team-environment/)*
-
----
