@@ -70,7 +70,8 @@ Changelog:
 ## v2.x.x
 
 - Shift from VirtualBox to VMWare for lab setup guide
-- Shifted from manual lab installation to automated setup script
+- Dedicated lab setup guides for Windows, MacOS, and Linux
+- Shifted from manual lab installation to automated setup scripts
 - Presented at: _DEF CON 26, BSides Las Vegas, BSides Chicago, BSides DC, 44con_
 
 ## v1.x.x
