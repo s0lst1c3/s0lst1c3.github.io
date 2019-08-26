@@ -62,15 +62,20 @@ To compromise EAP-PEAP, the attacker first performs an Evil Twin attack against 
 
 # Evil Twin Attack Against WPA2-EAP (PEAP)
 
-The first phase of this attack will be to create an Evil Twin using eaphammer. Traditionally, this attack is executed using a tool called hostapd-wpe. Although hostapd-wpe is a powerful tool in its own right, it can be quite cumbersome to use and configure. Eaphammer provides an easy to use command line interface to hostapd-wpe and automates its traditionally time-consuming configuration process.
+The first phase of this attack will be to create and Evil Twin using `eaphammer`. Traditionally, this attack is executed using a modified version of `hostapd` that has been patched with the following features:
 
-We’ll begin by creating a self-signed certificate using eaphammer’s --cert-wizard flag.
+- allow all users to authenticate with the AP regardless of whether their username is in the AP's credential store
+- log / capture all credentials and hashes sent by the user to the AP
 
+Although there are many capable tools that support this functionality, they can be quite cumbersome to use and configure. In keeping with the pragmatic perspective of this course, we'll demonstrate how to perform this attack `eaphammer`, which is a tool that provides an easy-to-use command line interface to hostapd and automates its traditionally time-consuming configuration process.
+
+We’ll begin by creating a self-signed certificate using eaphammer’s `--cert-wizard` flag:
+
+```bash
 	./eaphammer --cert-wizard
+```
 
-The Cert Wizard routine will walk you through the creation of a self-signed x.509 certificate automatically. You will be prompted to enter values for a series of attributes that will be used to create your cert. 
-
-It's best to choose values for your self-signed certificate that are believable within the context of your target organization. Since we’re attacking Evil Corp, the following examples values would be good choices:
+The Cert Wizard routine will walk you through the creation of a self-signed x.509 certificate, prompting you to enter values for a series of attributes. It's best to choose attributes for your self-signed certificate that are believable within the context of your target organization. Since we’re attacking Evil Corp, the following examples values would be good choices:
 
 1.	Country – US
 2.	State – Utah
@@ -83,25 +88,31 @@ When the Cert Wizard routine finishes, you should see output similar to what is 
 
 ![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-5.png)
 
-Once we have created a believable certificate, we can proceed to launch an Evil Twin attack against one of the target access points discovered in the last section. Let’s use eaphammer to perform an Evil Twin attack against the access point with BSSID 1c:7e:e5:97:79:b1.
+Once we have created a believable certificate, we can proceed to launch an Evil Twin attack against one of the target access points discovered in the last section. Let’s use eaphammer to perform an Evil Twin attack against the access point with BSSID `1c:7e:e5:97:79:b1`:
 
-./eaphammer --bssid 1C:7E:E5:97:79:B1 --essid ECwnet1 --channel 2 --wpa 2 --auth peap --interface wlan0 --creds
+```bash
+./eaphammer --bssid 1c:7e:e5:97:79:b1 --essid ECwnet1 --channel 2 --wpa 2 --auth wpa-eap --interface wlan0 --creds
+```
 
-Provided you can overpower the signal strength of the target access point, clients will begin to disconnect from the target network and connect to your access point. Unless the affected client devices are configured to reject invalid certificates, the victims of the attack will be presented with a message similar to the one below. 
+Provided you can provide a better signal than the target access point, clients will begin to disconnect from the target network and connect to your AP instead. Unless the affected client devices configured to reject invalid certificates, the victims of the attack will be presented with a message similar to the one below:
 
 ![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-7.png)
 
-Fortunately, it’s usually possible to find at least one enterprise employee who will blindly accept your certificate. It’s also common to encounter devices that are configured to accept invalid certificates automatically. In either case, you’ll soon see usernames, challenges, and responses shown in your terminal as shown below.
+Fortunately, it’s usually possible to find at least one enterprise employee who will blindly accept your certificate. It’s also common to encounter devices that are configured to accept invalid certificates automatically (especially when the target organization allows BYOD devices). In either case, you’ll soon see usernames, challenges, and responses shown in your terminal as shown below:
 
 ![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-6.png)
 
 This data can be passed to asleap to obtain a valid set of RADIUS credentials.
 
-	asleap –C <challenge> -R <response> -W <wordlist>
+```bash
+asleap –C <challenge> -R <response> -W <wordlist>
+```
 
 Congrats. You have your first set of RADIUS creds.
 
 ![evil twin attack](http://solstice.sh/images/workshops/awae/ii/image-8.png)
+
+# Lab Exercise: Evil Twin Varient 
 
 # Lab Exercise: Evil Twin Attack Against WPA2-PEAP
 

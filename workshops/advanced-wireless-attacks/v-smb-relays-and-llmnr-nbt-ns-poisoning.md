@@ -112,7 +112,7 @@ Practice using impacket to perform SMB Relay attacks against your Windows AD Vic
 
 You can find the Empire framework, as well as a copy of the instructions referenced above, within your home directory on the Kali VM.
 
-As your practice this attack, you may notice that it is ineffective against the domain controller. This is because domain controllers have a protection called SMB signing enabled by default that makes SMB Relay attacks impossible. 
+As you practice this attack, you may notice that it is ineffective against the domain controller. This is because domain controllers have a protection called SMB signing enabled by default that makes SMB Relay attacks impossible. 
 
 ---
 
