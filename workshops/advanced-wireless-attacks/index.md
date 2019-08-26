@@ -39,31 +39,37 @@ Changelog:
 ----------
 
 ## v3.0.1 - Mon Aug 26 2019
+
 Updated EAPHammer commandline syntax to work with latest version
 Content cleanup
 
 ## v3.0.0 
+
 Added additional course content: EAP Negotiation and Downgrade Attacks
 Presented at: DEF CON 27
 
 ## v2.x.x
+
 Shift from VirtualBox to VMWare for lab setup guide
 Shifted from manual lab installation to automated setup script
 Presented at DEF CON 26, BSides Las Vegas, BSides Chicago, BSides DC, 44con
 
 ## v1.x.x
-Initial workshop
-Presented at DEF CON 25, BSides Las Vegas, BSides Chicago, BSides DC, Hackfest
+
+Initial workshop \
+Presented at DEF CON 25, BSides Las Vegas, BSides Chicago, BSides DC, Hackfest\
 
 Prerequisites
---------------
+-------------
 
 A previous wireless security background is helpful but not required. You'll also need a laptop with at least 8 gb of RAM that is capable of running VirtualBox or VMWare. Additional hardware requirements can be in the Lab Setup Guide included below.
 
 Course Materials
 ----------------
 
-[Lab Setup Guide](https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Gabriel-Ryan-Advanced-Wireless-Attacks-Against-Enterprise-Networks-Lab-Setup-Guide.pdf)
+All course materials, including the lab setup guide, can be found at the following URL:
+
+[Course Materials](https://drive.google.com/open?id=0BwFgM9oAhmd_c2JJaG1iUmhkZTg)
 
 ---
 
