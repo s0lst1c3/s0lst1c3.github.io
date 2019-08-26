@@ -56,7 +56,7 @@ Presented at DEF CON 26, BSides Las Vegas, BSides Chicago, BSides DC, 44con
 
 ## v1.x.x
 
-Initial workshop \
+Initial workshop  
 Presented at DEF CON 25, BSides Las Vegas, BSides Chicago, BSides DC, Hackfest\
 
 Prerequisites
