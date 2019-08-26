@@ -83,7 +83,7 @@ Use eaphammer to create a WPA/2-EAP access point with the `--eap-downgrade full`
 ./eaphammer -i wlan0 -e exampleWiFi --auth wpa-eap --creds --eap-downgrade full
 ```
 
-Then attempt to connect to the access point using your Windows 8 VM, Windows 10 VM, your host operating system, and as many different mobile devices as you can get your hands on. Compare what occurs when each device attempts to authenticate with the access point.
+Then, attempt to connect to the access point using your Windows 8 VM, Windows 10 VM, your host operating system, and as many different mobile devices as you can get your hands on. Compare what occurs when each device attempts to authenticate with the access point.
 
 # Lab Exercise: GTC Downgrade attack
 
