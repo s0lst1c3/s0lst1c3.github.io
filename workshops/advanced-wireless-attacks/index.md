@@ -1,5 +1,5 @@
 ---
-title: Advanced Wireless Attacks Against Enterprise Networks
+title: Advanced Wireless Attacks Against Enterprise Networks (AWAE) (v3.0.1)
 layout: page
 ---
 
@@ -15,19 +15,45 @@ layout: page
 
 ---
 
+# Preface
+
+This is the online version of my Advanced Wireless Attacks workshop, which was first presented at DEF CON 25, BSides Las Vegas, and BSides SLC in 2017. It's seen some updates since then, and is likely to continue to be revised and expanded in the future. If you feel that this workshop is missing something, or have any feedback whatsoever, please don't hesitate to submit an issue on Github.
+
 # Workshop Overview
 
-This is the online version of the class that I taught at DEF CON 25, BSides Las Vegas, and BSides SLC this year. In this workshop you will learn how to carry out sophisticated wireless attacks against corporate infrastructure. Topics of of interest include attacking and gaining access to WPA2-Enterprise networks, bypassing network access controls, and exploring how wireless can be leveraged as a powerful means of lateral movement through an Active Directory environment.
+In this workshop you will learn how to carry out sophisticated wireless attacks against corporate infrastructure. Topics of of interest include attacking and gaining access to WPA/2-EAP, bypassing network access controls, and exploring how wireless can be leveraged as a powerful means of lateral movement throughout an Active Directory environment.
 
 Course Highlights include:
+
 - Wireless Reconnaissance and Target Identification Within A Red Team Environment
-- Attacking and Gaining Entry to WPA2-EAP wireless networks
+- Attacking and Gaining Entry to WPA/2-EAP wireless networks
 - SMB Relay Attacks and LLMNR/NBT-NS Poisoning
 - Data Manipulation and Browser Exploitation Using Wireless MITM Attacks
 - Downgrading Modern SSL/TLS Implementations Using Partial HSTS Bypasses
+- EAP and GTC Downgrade Attacks
 - Firewall and NAC Evasion Using Indirect Wireless Pivots
 
-The material covered in this workshop is supplemented by hands-on lab exercises within the course's virtual lab environment. Instructions on setting up the virtual lab environment can be found in the Lab Setup Guide, which is included below. Feel free to reach out to the instructor [here](http://solstice.sh/contact/) for guidance.
+The material covered in this workshop is supplemented by hands-on lab exercises within the course's virtual lab environment. Instructions on setting up the virtual lab environment can be found in the Lab Setup Guide, which is included below. Feel free to reach out to the instructor at gryan[at]specterops[dot]io for guidance.
+
+Changelog:
+----------
+
+## v3.0.1 - Mon Aug 26 2019
+Updated EAPHammer commandline syntax to work with latest version
+Content cleanup
+
+## v3.0.0 
+Added additional course content: EAP Negotiation and Downgrade Attacks
+Presented at: DEF CON 27
+
+## v2.x.x
+Shift from VirtualBox to VMWare for lab setup guide
+Shifted from manual lab installation to automated setup script
+Presented at DEF CON 26, BSides Las Vegas, BSides Chicago, BSides DC, 44con
+
+## v1.x.x
+Initial workshop
+Presented at DEF CON 25, BSides Las Vegas, BSides Chicago, BSides DC, Hackfest
 
 Prerequisites
 --------------
