@@ -90,6 +90,8 @@ In an EAP downgrade attack, we tell hostapd to use an EAP User file that looks s
 
 This causes hostapd to explicity suggest EAP-GTC during the EAP negotiation process. If the client accepts the suggestion, it will either prompt the user for a one-time password or transmit a plaintext password to hostapd automatically [9]. Since many client devices fail to specify what kind of password they are prompting for, the users are likely to believe that they are being prompted for their network logon credentials [9]. You can imagine the implications of this attack in environments where Active Directory accounts are used for RADIUS authentication.
 
+![eap downgrade](/images/eap-negotiation/eap-downgrade-attack.gif)
+
 # Controlling EAP negotiation with EAPHammer
 
 The problem with this approach is that proposing EAP methods from strongest to weakest slows down the EAP negotiation process, since many client devices won't accept the first few EAP methods suggested by hostapd. Protracted EAP negotiation can result in a noticable loss of service for affected client devices, and anecdotally may cause devices to disconnect from the rogue AP (possibly due to manual intervention by frustrated users). Also anecdotally, this tends to occur frequently in situations where it's already difficult to force a device to connect the rogue AP.
