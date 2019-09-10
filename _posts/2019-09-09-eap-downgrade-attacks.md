@@ -21,9 +21,7 @@ In this blog post we'll discuss each of the following topics:
 
 Please note that the section on detection and monitoring is limited to a high level overview, since it is a topic that warrants a dedicated post of its own.
 
-__replace with link to current version__  
-__dont forget to tag a release__
-- [https://github.com/s0lst1c3/eaphammer/releases/tag/v0.7.0-beta](https://github.com/s0lst1c3/eaphammer/releases/tag/v0.7.0-beta)
+- [https://github.com/s0lst1c3/eaphammer/releases/tag/v1.8.0](https://github.com/s0lst1c3/eaphammer/releases/tag/v1.8.0)
 
 # Background
 
