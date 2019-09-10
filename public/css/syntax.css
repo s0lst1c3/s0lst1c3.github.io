@@ -35,7 +35,9 @@
 .highlight .nf { color: #f2bcff } /* Name.Function */
 .highlight .nl { color: #99f } /* Name.Label */
 .highlight .nn { color: #0cf; } /* Name.Namespace */
-.highlight .nt { color: #2f6f9f; } /* Name.Tag */
+/*.highlight .nt { color: #2f6f9f; } */ /* Name.Tag */
+/*.highlight .nt { color: #00e9ff; } */ /* Name.Tag */
+.highlight .nt { color: #8bcdff; } /* Name.Tag */
 .highlight .nv { color: #0ff } /* Name.Variable */
 .highlight .ow { color: #0af; } /* Operator.Word */
 .highlight .w { color: #bbb } /* Text.Whitespace */
